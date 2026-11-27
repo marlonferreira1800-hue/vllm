@@ -175,11 +175,9 @@ aiohttp==3.14.5 \
     --hash=sha256:fce9523df31cea6284f3e2c479876750d7687cf671d7b25d32b19effc0e86441 \
     --hash=sha256:ff75a7537413a86e7cafe98e0e1d6e3dc4b15c6349896e7d5c6b881bfdb6d550
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   aiohttp-cors
     #   fsspec
-    #   gpt-oss
     #   lm-eval
     #   ray
 aiohttp-cors==0.8.1 \
@@ -193,7 +191,7 @@ aiosignal==1.4.0 \
 albumentations==1.4.6 \
     --hash=sha256:8e8c007f1d0743f0965da08e4308626a2a5d60b2ea2a2d0bbd41ffa4f5b4822d \
     --hash=sha256:e77d2e82ca1d547b1288fa3f68da098cc8cc1a52a7cf8b138200e74b18f82a33
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 alembic==1.18.4 \
     --hash=sha256:a5ed4adcf6d8a4cb575f3d759f071b03cd6e5c7618eb796cb52497be25bfe19a \
     --hash=sha256:cb6e1fd84b6174ab8dbb2329f86d631ba9559dd78df550b57804d607672cedbc
@@ -211,14 +209,12 @@ annotated-types==0.7.0 \
 anthropic==0.93.0 \
     --hash=sha256:2c20b2ce6d305564c66a6cbaedddee8efdd3b9753098bf314093fcf4c662d04c \
     --hash=sha256:fea8376f7d5cdf99d5e8e85a48fe7a7bd8ab307cdfee4b1e8283a18b1c0ce1b5
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 anyio==4.14.2 \
     --hash=sha256:9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494 \
     --hash=sha256:cfa139f3ed1a23ee8f88a145ddb5ac7605b8bbfd8592baacd7ce3d8bb4313c7f
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   anthropic
     #   httpx
     #   httpx2
@@ -266,12 +262,11 @@ apache-tvm-ffi==0.1.11 \
     --hash=sha256:f47435e41bf8a2018ef126fad41f18e0c8fe8be4d25fb3ed04b615278b7806d4 \
     --hash=sha256:fd587ecd8ee843bbec467762490c8347af3dfe997608f9841b48a98f5fffac7f
     # via
-    #   -c requirements/rocm.txt
     #   tilelang
     #   xgrammar
 arctic-inference==0.1.1 \
     --hash=sha256:36857e2fbe3ead34821a04be98dfab95086050c1e38199c8fdfe308234fdcf63
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 argcomplete==3.6.3 \
     --hash=sha256:62e8ed4fd6a45864acc8235409461b72c9a28ee785a2011cc5eb78318786c89c \
     --hash=sha256:f5007b3a600ccac5d25bbce33089211dfd49eab4a7718da3f10e3082525a92ce
@@ -342,7 +337,7 @@ av==16.1.0 \
     --hash=sha256:ee0e8de2e124a9ef53c955fe2add6ee7c56cc8fd83318265549e44057db77142 \
     --hash=sha256:f42e1a68ec2aebd21f7eb6895be69efa6aa27eec1670536876399725bbda4b99 \
     --hash=sha256:f49243b1d27c91cd8c66fdba90a674e344eb8eb917264f36117bf2b6879118fd
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 azure-core==1.39.0 \
     --hash=sha256:4ac7b70fab5438c3f68770649a78daf97833caa83827f91df9c14e0e0ea7d34f \
     --hash=sha256:8a90a562998dd44ce84597590fff6249701b98c0e8797c95fcdd695b54c35d74
@@ -360,14 +355,14 @@ azure-storage-blob==12.28.0 \
 backoff==2.2.1 \
     --hash=sha256:03f829f5bb1923180821643f8753b0502c3b682293992485b0eef2807afa5cba \
     --hash=sha256:63579f9a0628e06278f7e47b7d7d5b6ce20dc65c5e96a6f3ca99a6adca0396e8
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 bitsandbytes==0.50.0 \
     --hash=sha256:173d137610468bec9cddbaa2e049254e97792657ab984e3e737bec1772c1668c \
     --hash=sha256:7f9ebf51d76a00341711cdd557af97555274b5aad3444975ff9927866a18bc11 \
     --hash=sha256:824d931d8e77d7db09bb26d940268d36920e0757e2a2f49cce8766e309e13048 \
     --hash=sha256:9c6f63f7f35c4425661256daca56664d2e4f05a5d230a9a148cb14df207bcca2 \
     --hash=sha256:c6f482df4dc18c7c150246577025de40dd0935031ea10a1e4122599a525b39bb
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 black==26.3.1 \
     --hash=sha256:0126ae5b7c09957da2bdbd91a9ba1207453feada9e9fe51992848658c6c8e01c \
     --hash=sha256:0f76ff19ec5297dd8e66eb64deda23631e642c9393ab592826fd4bdc97a4bce7 \
@@ -397,7 +392,7 @@ black==26.3.1 \
     --hash=sha256:f1cd08e99d2f9317292a311dfe578fd2a24b15dbce97792f9c4d752275c1fa56 \
     --hash=sha256:f89f2ab047c76a9c03f78d0d66ca519e389519902fa27e7a91117ef7611c0568
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   datamodel-code-generator
 blake3==1.0.8 \
     --hash=sha256:003f61e8c41dd9931edddf1cc6a1bb680fb2ac0ad15493ef4a1df9adc59ce9df \
@@ -509,13 +504,11 @@ blake3==1.0.8 \
     --hash=sha256:fc9fc4a0a1a13991b23a589fb6fbb8290bd94a72c130e69e27c9769612516424 \
     --hash=sha256:fe1b02ab49bfd969ef50b9f17482a2011c77536654af21807ba5c2674e0bb2a0 \
     --hash=sha256:fe61d52da1d102aabb0e315d3fc613c11c103376aa0a8510aeee159939612f76
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 blobfile==3.0.0 \
     --hash=sha256:32ec777414de7bb2a76ca812a838f0d33327ca28ae844a253503cde625cdf2f1 \
     --hash=sha256:48ecc3307e622804bd8fe13bf6f40e6463c4439eba7a1f9ad49fd78aa63cc658
-    # via
-    #   -r requirements/test/rocm.in
-    #   gpt-oss
+    # via -r rocm.in
 bm25s==0.2.13 \
     --hash=sha256:2ac797226b43e260c58b99eaf374a77b39d8a00d0f6f7f965539703e8b9a1171 \
     --hash=sha256:b6f6e787fbdb7f0441c7d3c201d62a5581f4387e5ee2c0b14fa5bec4b432fe45
@@ -539,11 +532,11 @@ bounded-pool-executor==0.0.3 \
 buildkite-test-collector==0.1.9 \
     --hash=sha256:541d3dcbe8f6c69121ce2a12d61fbae0ae38243b666b380c8d48670a194e1ec5 \
     --hash=sha256:d6437cfff5f9208b9786fbe0f67103dce11b3e6482769dc5e9deac8f050d2488
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 cachetools==7.0.5 \
     --hash=sha256:0cd042c24377200c1dcd225f8b7b12b0ca53cc2c961b43757e774ebe190fd990 \
     --hash=sha256:46bc8ebefbe485407621d0a4264b23c080cedd913921bad7ac3ed2f26c183114
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 cbor2==5.9.0 \
     --hash=sha256:0322296b9d52f55880e300ba8ba09ecf644303b99b51138bbb1c0fb644fa7c3e \
     --hash=sha256:0485d3372fc832c5e16d4eb45fa1a20fc53e806e6c29a1d2b0d3e176cedd52b9 \
@@ -589,13 +582,12 @@ cbor2==5.9.0 \
     --hash=sha256:fb7afe77f8d269e42d7c4b515c6fd14f1ccc0625379fb6829b269f493d16eddd \
     --hash=sha256:fbb06f34aa645b4deca66643bba3d400d20c15312d1fe88d429be60c1ab50f27 \
     --hash=sha256:fbdcf4d74acbeb7672e6413e81cd2c1ced1a4a8cf949484ac54e9af5265c3c72
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 certifi==2026.10.19 \
     --hash=sha256:035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae \
     --hash=sha256:42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   httpcore
     #   httpx
     #   requests
@@ -843,10 +835,6 @@ choreographer==1.2.1 \
     --hash=sha256:022afd72b1e9b0bcb950420b134e70055a294c791b6f36cfb47d89745b701b5f \
     --hash=sha256:9af5385effa3c204dbc337abf7ac74fd8908ced326a15645dc31dde75718c77e
     # via kaleido
-chz==0.4.0 \
-    --hash=sha256:5380039e6970a1056c2140288aafa41a33f26d5e4c685117be80f7e260c8d679 \
-    --hash=sha256:5db5ffe42f6be38f1c37e1b18f0d5559572ee8a8dc941116e67f1bd5396e2a9b
-    # via gpt-oss
 click==8.4.2 \
     --hash=sha256:9a6cea6e60b17ebe0a44c5cc636d94f09bd66142c1cd7d8b4cd731c4917a15f6 \
     --hash=sha256:e6f9f66136c816745b9d65817da91d61d957fb16e02e4dcd0552553c5a197b76
@@ -864,12 +852,12 @@ cloudpickle==3.1.2 \
     --hash=sha256:7fda9eb655c9c230dab534f1983763de5835249750e85fbcef43aaa30a9a2414 \
     --hash=sha256:9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   tilelang
 cohere==7.0.8 \
     --hash=sha256:5d9986b9b13cfe5590021474540648ff3c9e9ce4bfddc3d7f8e31acf1898c4d7 \
     --hash=sha256:a4fe9b9e148cb277ee152009d3566434b055db9d41fc7433abda78add22632ab
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 cohere-melody==0.14.0 \
     --hash=sha256:00a6093eab73a8844143ad5b4d28581c31162aaa854ec99a00f732c419b7bf97 \
     --hash=sha256:00bd30a48bbf2086855f3173de32e36d8098cd141b0d863f47f750c1e6d426a2 \
@@ -956,7 +944,7 @@ cohere-melody==0.14.0 \
     --hash=sha256:f55b2e75aeb01cea052f42ab7908a1efa7d001966d0f3c72c65456e1aa48b577 \
     --hash=sha256:f7b8d96ce4b39a4aa5bc496164b6d60cbda6f6b54d75b52f3dc0eb9a0d38229a \
     --hash=sha256:fa0740ac61b2be77b75cd15c670bd25f670e39e37be03323360bac5f2c3c300c
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 colorama==0.4.6 \
     --hash=sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44 \
     --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6
@@ -974,9 +962,7 @@ colorlog==6.10.1 \
 compressed-tensors==0.17.0 \
     --hash=sha256:15c20d06bdbcf35b51fc99fd125e7b9be1e1855567c33b7a46dfac26ad6fb126 \
     --hash=sha256:4a1b89b508f7efb8ffb4eee8a6e69e0452d9b080cae130146025c64fbe9fa9aa
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 contourpy==1.3.3 \
     --hash=sha256:023b44101dfe49d7d53932be418477dba359649246075c996866106da069af69 \
     --hash=sha256:07ce5ed73ecdc4a03ffe3e1b3e3c1166db35ae7584be76f65dbbe28a7791b0cc \
@@ -1051,7 +1037,7 @@ contourpy==1.3.3 \
     --hash=sha256:fd914713266421b7536de2bfa8181aa8c699432b6763a0ea64195ebe28bff6a9 \
     --hash=sha256:fde6c716d51c04b1c25d0b90364d0be954624a0ee9d60e23e850e8d48353d07a
     # via matplotlib
-coverage==7.13.5 \
+coverage[toml]==7.13.5 \
     --hash=sha256:012d5319e66e9d5a218834642d6c35d265515a62f01157a45bcc036ecf947256 \
     --hash=sha256:02ca0eed225b2ff301c474aeeeae27d26e2537942aa0f87491d3e147e784a82b \
     --hash=sha256:03ccc709a17a1de074fb1d11f217342fb0d2b1582ed544f554fc9fc3f07e95f5 \
@@ -1342,12 +1328,48 @@ cryptography==50.0.1 \
     --hash=sha256:fd3718b960d0b5dd213cdf03f3bcb7000e69dda0de8b956061947ff6bcff5558 \
     --hash=sha256:ff838d62ec1bfce4f9ba7fa16f4a7b554cd8d0c299e6be37502161a660c84eef
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   azure-identity
     #   azure-storage-blob
     #   google-auth
     #   msal
     #   pyjwt
+cuda-bindings==13.5.0 \
+    --hash=sha256:08b7e8d674c3266facb00453a7e34ea7d3ea965c2f594bb728f269f45f39fbe2 \
+    --hash=sha256:0d7a5d92be00b2a618fd7c62482f6c69584fd5ac498193b236600810d7ebaf74 \
+    --hash=sha256:190553fd300936e14cd4a8c64c1127a301a99e64b31c77fb825cd1d9eee677aa \
+    --hash=sha256:2dbc7f6148fd1a66b49bf8465b78f155535eaaa344cd7675e94dd2a997892175 \
+    --hash=sha256:2e8d562f928fe0bb254b1ade02133f9f6bc5e395efd2f1fbdb8533d64bf16e1f \
+    --hash=sha256:40eadfad6ae1554f8c1aa456620a85a49a275fc902f2c6dd93ee8c488b2c5e9f \
+    --hash=sha256:4d850299e6ba1ca9caec78b3d87b6b7590ed1d6c9a404272798f40b1e19e3f24 \
+    --hash=sha256:580a2cde3a1259086420b5d5339914f408c4ef7fa4d5cfdfe057abfdbf2b134a \
+    --hash=sha256:643ed0f6aae2bec657a7ad8872a62912178c28e94bb533ce60dbc46c1c0950dc \
+    --hash=sha256:64d9c337209736eadc807a36925f11528a4815fed9869df77f259bc9341bc1e1 \
+    --hash=sha256:71c15ed97099a8ef416515d80ddd10770e0f6339234e16855a526d2896516631 \
+    --hash=sha256:81b3bb88206439c51b6b6de4fa3c5f9cfbb1d705cd4fa586dc6197e53c8adc52 \
+    --hash=sha256:8634b0c407655ef6e5a51ce6073c2dac5dfdc3e13a3169ea41491138513071f7 \
+    --hash=sha256:9046ec1bfeb2dc0ed656f0c5a11787d2c9cfda9d2c8806ebf353456abd638b16 \
+    --hash=sha256:92baf83790a1c7f33cce41d89d7e4b5bea67d683f08007c781d88d5e55a9cb33 \
+    --hash=sha256:991ace38a09fc664228209fd023d1394f5209aeee4728f14c1f7647908cb5a70 \
+    --hash=sha256:99746f2928150042191edf7952323bb22e8f104f7bcee787bd7e2001a8bba70b \
+    --hash=sha256:9b69fdaa27b1f69746bb23b7fa6a458c88dffcb4d7cf27062ad2f1b6245a18c0 \
+    --hash=sha256:a290fb4db7382bb3cfbc4485e5aa2f631f3a2f838c5d15bc00be743456e47722 \
+    --hash=sha256:a46a8cc84112d769d0f57bf3ae3fedc115cf09348f14da85a1a8200968b6f262 \
+    --hash=sha256:cf525b2c2113fdfd2b10899a3e5d280520e970aa13c6ca021e83d9d02f895ed1 \
+    --hash=sha256:d47b6f6d0398f97c82e2525eefb02e7252848e48c902824f6a6b6467a5902894 \
+    --hash=sha256:da463a68cfc0702639f4c09098581cd617284d26c905455b4aae13649ebf2cef \
+    --hash=sha256:da7fafa0eb222b980dc931281d1b53f822c34efb33e72ae14b0e1ce216232afd \
+    --hash=sha256:dc1e7af961296aec608ff5ea79144c4c6284ca71fc41a8c09424c32171361987 \
+    --hash=sha256:f1faaea572a382e903d8bfe2a066de2879d04775198c0fb28f3791bf1221b8a1 \
+    --hash=sha256:f812952466b140cb13a756d2e38709b6f6cc32afcf9ec6d16708afd8b165ff98 \
+    --hash=sha256:fb26fb0532d9bb0f5d5469493530c71fe6dce8614e20006beaa546408a97e4bc
+    # via torch
+cuda-pathfinder==1.9.1 \
+    --hash=sha256:b743c132f90ad2d1e71d43fd28f31ebcde518f943e50fd44aca62b2a80d5230d
+    # via cuda-bindings
+cuda-toolkit[cublas,cudart,cufft,cufile,cupti,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.2.2 \
+    --hash=sha256:d12edc1aad1356236a2ee10c0d794b1aff5d3e79bfeca54867c3bb8e5afd87b0
+    # via torch
 cycler==0.12.1 \
     --hash=sha256:85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30 \
     --hash=sha256:88bb128f02ba341da8ef447245a9e138fae777f6a23943da4540077d3601eb1c
@@ -1355,7 +1377,7 @@ cycler==0.12.1 \
 datamodel-code-generator==0.86.0 \
     --hash=sha256:1834ba0e84307dfed625eeacfbb07d790ede01a3adf5414a1c9947c5b9139078 \
     --hash=sha256:1a3d6f0a14a33e334b4251d04e67b0b6ef05c96d4625fb99bd09d716e30ea084
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 dataproperty==1.1.0 \
     --hash=sha256:b038437a4097d1a1c497695c3586ea34bea67fdd35372b9a50f30bf044d77d04 \
     --hash=sha256:c61fcb2e2deca35e6d1eb1f251a7f22f0dcde63e80e61f0cc18c19f42abfd25b
@@ -1366,7 +1388,7 @@ datasets==3.6.0 \
     --hash=sha256:1b2bf43b19776e2787e181cfd329cb0ca1a358ea014780c3581e0f276375e041 \
     --hash=sha256:25000c4a2c0873a710df127d08a202a06eab7bf42441a6bc278b499c2f72cd1b
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   evaluate
     #   lm-eval
     #   mteb
@@ -1380,7 +1402,7 @@ decord==0.6.0 \
     --hash=sha256:85ef90d2f872384657d7774cc486c237c5b12df62d4ac5cb5c8d6001fa611323 \
     --hash=sha256:9c20674964fb1490c677bd911d2023d2a09fec7a58a4bb0b7ddf1ccc269f107a \
     --hash=sha256:a0eb1258beade34dceb29d97856a7764d179db1b5182899b61874f3418a1abc8
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 defusedxml==0.7.1 \
     --hash=sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69 \
     --hash=sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61
@@ -1388,9 +1410,7 @@ defusedxml==0.7.1 \
 depyf==0.20.0 \
     --hash=sha256:d31effad4261cebecb58955d832e448ace88f432328f95f82fd99c30fd9308d4 \
     --hash=sha256:fb7683bd72c44f67b56029df2c47721e9a02ffa4d7b19095f1c54c4ebf797a98
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 dill==0.3.8 \
     --hash=sha256:3ebe3c479ad625c4553aca177444d89b486b1d84982eeacded644afc0cf797ca \
     --hash=sha256:c36ca9ffb54365bdd2f8eb3eff7d2a21237f8452b57ace88b1ac615b7e815bd7
@@ -1414,10 +1434,6 @@ dnspython==2.8.0 \
     --hash=sha256:01d9bbc4a2d76bf0db7c1f729812ded6d912bd318d3b1cf81d30c0f845dbf3af \
     --hash=sha256:181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f
     # via email-validator
-docker==7.2.0 \
-    --hash=sha256:a3f45fdeb9165e2d25d9a1d02ddf3bc70fb572cf5ebbf9b58558c22caf29b71f \
-    --hash=sha256:cebb93773d334f778e023a7ee352a8d6e13ab1bd3b863a4d4a59dec897df43ac
-    # via gpt-oss
 docopt==0.6.2 \
     --hash=sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491
     # via num2words
@@ -1429,7 +1445,7 @@ einops==0.8.2 \
     --hash=sha256:54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193 \
     --hash=sha256:609da665570e5e265e27283aab09e7f279ade90c4f01bcfca111f3d3e13f2827
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   encodec
     #   vector-quantize-pytorch
     #   vocos
@@ -1454,15 +1470,13 @@ evaluate==0.4.6 \
     --hash=sha256:bca85bc294f338377b7ac2f861e21c308b11b2a285f510d7d5394d5df437db29 \
     --hash=sha256:e07036ca12b3c24331f83ab787f21cc2dbf3631813a1631e63e40897c69a3f21
     # via lm-eval
-fastapi==0.135.2 \
+fastapi[standard]==0.135.2 \
     --hash=sha256:0af0447d541867e8db2a6a25c23a8c4bd80e2394ac5529bd87501bbb9e240ca5 \
     --hash=sha256:88a832095359755527b7f63bb4c6bc9edb8329a026189eed83d6c1afcf419d56
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   gpt-oss
+    #   -r ../common.txt
     #   model-hosting-container-standards
-fastapi-cli==0.0.24 \
+fastapi-cli[standard]==0.0.24 \
     --hash=sha256:1afc9c9e21d7ebc8a3ca5e31790cd8d837742be7e4f8b9236e99cb3451f0de00 \
     --hash=sha256:4a1f78ed798f106b4fee85ca93b85d8fe33c0a3570f775964d37edb80b8f0edc
     # via fastapi
@@ -1737,15 +1751,12 @@ fastsafetensors==0.3.3 \
     --hash=sha256:df2f641647b79093c5e3f4bb0b9c7d771f22b61279714c3059d5c71a7cf708da \
     --hash=sha256:e3386834e1595834124cfbb23e05a732cb1b4fb5f98562375c1806f14fe1d677 \
     --hash=sha256:f969b2c818942748ff1bc619e6d575a7a7156a7d488d4c41779fba8c4e1891dc
-    # via
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/rocm.in
+    # via -r rocm.in
 filelock==3.25.2 \
     --hash=sha256:b64ece2b38f4ca29dd3e810287aa8c48182bbecd1ae6e9ae126c9b35f1382694 \
     --hash=sha256:ca8afb0da15f229774c9ad1b455ed96e85a81373065fb10446672f64444ddf70
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   blobfile
     #   datasets
     #   huggingface-hub
@@ -1805,7 +1816,7 @@ fonttools==4.62.1 \
     --hash=sha256:ef46db46c9447103b8f3ff91e8ba009d5fe181b1920a83757a5762551e32bb68 \
     --hash=sha256:fa1d16210b6b10a826d71bed68dd9ec24a9e218d5a5e2797f37c573e7ec215ca
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   matplotlib
 frozendict==2.4.7 \
     --hash=sha256:05dd27415f913cd11649009f53d97eb565ce7b76787d7869c4733738c10e8d27 \
@@ -2034,7 +2045,7 @@ frozenlist==1.8.0 \
     # via
     #   aiohttp
     #   aiosignal
-fsspec==2025.3.0 \
+fsspec[http]==2025.3.0 \
     --hash=sha256:a935fd1ea872591f2b5148907d103488fc523295e6c64b835cfad8c3eca44972 \
     --hash=sha256:efb87af3efa9103f94ca91a7f8cb7a4df91af9f74fc106c9c7ea0efd7277c1b3
     # via
@@ -2049,7 +2060,7 @@ ftfy==6.3.1 \
     # via open-clip-torch
 genai-perf==0.0.16 \
     --hash=sha256:352a949bf06f92a7a2232ede44d59b9386b82e150e10548a80e71bf0ccb08654
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 genson==1.3.0 \
     --hash=sha256:468feccd00274cc7e4c09e84b08704270ba8d95232aa280f65b986139cec67f7 \
     --hash=sha256:e02db9ac2e3fd29e65b5286f7135762e2cd8a986537c075b06fc5f1517308e37
@@ -2125,10 +2136,6 @@ googleapis-common-protos==1.73.0 \
     #   google-api-core
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
-gpt-oss==0.0.9 \
-    --hash=sha256:4bbd174a6af2060179ab292505ec8e0f2505188628a6d102bd72690d06387f9c \
-    --hash=sha256:f8cce0186e31752fb94ccbd61dcca5fd39603b6d22b9779656a7b20749a6330c
-    # via -r requirements/test/rocm.in
 graphql-core==3.2.8 \
     --hash=sha256:015457da5d996c924ddf57a43f4e959b0b94fb695b85ed4c29446e508ed65cf3 \
     --hash=sha256:cbee07bee1b3ed5e531723685369039f32ff815ef60166686e0162f540f1520c
@@ -2251,17 +2258,14 @@ grpcio==1.78.0 \
     --hash=sha256:fd5f135b1bd58ab088930b3c613455796dfa0393626a6972663ccdda5b4ac6ce \
     --hash=sha256:ff870aebe9a93a85283837801d35cd5f8814fe2ad01e606861a7fb47c762a2b7
     # via
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   grpcio-reflection
     #   opentelemetry-exporter-otlp-proto-grpc
     #   ray
 grpcio-reflection==1.78.0 \
     --hash=sha256:06fcfde9e6888cdd12e9dd1cf6dc7c440c2e9acf420f696ccbe008672ed05b60 \
     --hash=sha256:e6e60c0b85dbcdf963b4d4d150c0f1d238ba891d805b575c52c0365d07fc0c40
-    # via
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/rocm.in
+    # via -r rocm.in
 h11==0.16.0 \
     --hash=sha256:4e35b956cf45792e4caa5885e69fba00bdbc6ffafbfa020300e549b208ee5ff1 \
     --hash=sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86
@@ -2273,7 +2277,7 @@ h2==4.4.1 \
     --hash=sha256:0e25f1462b23c9cb82d9eb02e28bc706dac2a68cb457c6a0d74d63c8a2a5d0e6 \
     --hash=sha256:4e866ffb1a869ae14dd9b5e6beb5c24a13da0495ad72b65925ded182521c1516
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   httpx
 harfile==0.5.0 \
     --hash=sha256:ab8a01d0d21d3b7f5ad57e7dc56b8b829f6a8855c1fa143aad464e7e8169f5e3 \
@@ -2409,12 +2413,8 @@ hpack==4.2.0 \
     --hash=sha256:0895cfa3b5531fc65fe439c05eb65144f123bf7a394fcaa56aa423548d8e45c0 \
     --hash=sha256:858ac0b02280fa582b5080d68db0899c62a80375e0e5413a74970c5e518b6986
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   h2
-html2text==2025.4.15 \
-    --hash=sha256:00569167ffdab3d7767a4cdf589b7f57e777a5ed28d12907d8c58769ec734acc \
-    --hash=sha256:948a645f8f0bc3abe7fd587019a2197a12436cd73d0d4908af95bfc8da337588
-    # via gpt-oss
 httpcore==1.0.9 \
     --hash=sha256:2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55 \
     --hash=sha256:6e34463af53fd2ab5d807f399a9b45ea31c3dfa2276f15a2c3f00afff6e176e8
@@ -2468,11 +2468,11 @@ httptools==0.7.1 \
     --hash=sha256:f65744d7a8bdb4bda5e1fa23e4ba16832860606fcc09d674d56e425e991539ec \
     --hash=sha256:f72fdbae2dbc6e68b8239defb48e6a5937b12218e6ffc2c7846cc37befa84362
     # via uvicorn
-httpx==0.27.2 \
+httpx[http2]==0.27.2 \
     --hash=sha256:7bb2708e112d8fdd7829cd4243970f0c223274051cb35ee80c03301ee29a3df0 \
     --hash=sha256:f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   anthropic
     #   cohere
     #   fastapi
@@ -2485,15 +2485,14 @@ httpx2==2.12.0 \
     --hash=sha256:7631fe9887a8a2275f4a2540e053aa670fcc50742864a9ae7c66e609fdcf12cf \
     --hash=sha256:cc8b6eecb8661c146b8f89a60e97456ee086e91a784ed31ac450c3a9e613dd36
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   huggingface-hub
     #   mcp
 huggingface-hub==2.4.0 \
     --hash=sha256:13a6158b9e3393d9d3f248ce99074d50c2a0a1449fb9d8e2f710751e2084c188 \
     --hash=sha256:42ecfd93ede47bdd333daebbf66a32d7bfe2e18752754fe4d2d4f98a0179d801
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   datasets
     #   evaluate
@@ -2634,11 +2633,11 @@ ijson==3.5.0 \
     --hash=sha256:f7168a39e8211107666d71b25693fd1b2bac0b33735ef744114c403c6cac21e1 \
     --hash=sha256:f969ffb2b89c5cdf686652d7fb66252bc72126fa54d416317411497276056a18 \
     --hash=sha256:fdeee6957f92e0c114f65c55cf8fe7eabb80cfacab64eea6864060913173f66d
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 imagehash==4.3.2 \
     --hash=sha256:02b0f965f8c77cd813f61d7d39031ea27d4780e7ebcad56c6cd6a709acc06e5f \
     --hash=sha256:e54a79805afb82a34acde4746a16540503a9636fd1ffb31d8e099b29bbbf8156
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 imageio==2.37.3 \
     --hash=sha256:46f5bb8522cd421c0f5ae104d8268f569d856b29eb1a13b92829d1970f32c9f0 \
     --hash=sha256:bbb37efbfc4c400fcd534b367b91fcd66d5da639aaa138034431a1c5e0a41451
@@ -2662,7 +2661,7 @@ instanttensor==0.1.9 \
     --hash=sha256:c07d7a5a8960746ca5732e18afe9da377937601a2fa3eab96124a0f44bc16605 \
     --hash=sha256:d2e8a2ce8b63f2aadd551bfa35400c439ffae9fcb3df4651c8c7dc39a4de32e0 \
     --hash=sha256:d8692b97991c1a5fb2db7905b9a6ae90a7f967c7ddd853d35e41caa146750c02
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 interegular==0.3.3 \
     --hash=sha256:b0c07007d48c89d6d19f7204972d369b2a77222722e126b6aa63aa721dc3b19c \
     --hash=sha256:d9b697b21b34884711399ba0f0376914b81899ce670032486d0d048344a76600
@@ -2682,7 +2681,6 @@ jinja2==3.1.6 \
     #   datamodel-code-generator
     #   fastapi
     #   genai-perf
-    #   gpt-oss
     #   lm-eval
     #   torch
 jiter==0.14.0 \
@@ -2801,7 +2799,7 @@ jiter==0.14.0 \
 jiwer==4.0.0 \
     --hash=sha256:7efaf0bd336b095d99ddef9dd67e1ee829d75d58aa2a81d9639870b01d6d95ea \
     --hash=sha256:ae9c051469102a61ef0927100baeeb4546f78d180c9b0948281d08eaf44c191e
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 jmespath==1.1.0 \
     --hash=sha256:472c87d80f36026ae83c6ddd0f1d05d4e510134ed462851fd5f754c8c3cbb88d \
     --hash=sha256:a5663118de4908c91729bea0acadca56526eb2698e83de10cd116ae0f4e97c64
@@ -2820,8 +2818,7 @@ jsonschema==4.26.0 \
     --hash=sha256:0c26707e2efad8aa1bfc5b7ce170f3fccc2e4918ff85989ba9ffa9facb2be326 \
     --hash=sha256:d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   hypothesis-jsonschema
     #   mcp
     #   mistral-common
@@ -2864,14 +2861,6 @@ junit-xml==1.9 \
     --hash=sha256:de16a051990d4e25a3982b2dd9e89d671067548718866416faec14d9de56db9f \
     --hash=sha256:ec5ca1a55aefdd76d28fcc0b135251d156c7106fa979686a4b48d62b761b4732
     # via schemathesis
-jupyter-client==8.10.0 \
-    --hash=sha256:5f73f24f22fa25192cfff6b23c051932a2473a797b05734aff495b392103e14e \
-    --hash=sha256:9f7116294dca55f1785be880057d44544db9b1567718d92cb33c58886afb9497
-    # via gpt-oss
-jupyter-core==5.9.1 \
-    --hash=sha256:4d09aaff303b9566c3ce657f580bd089ff5c91f5f89cf7d8846c3cdf465b5508 \
-    --hash=sha256:ebf87fdc6073d142e114c72c9e29a9d7ca03fad818c5d300ce2adc1fb0743407
-    # via jupyter-client
 kaldi-native-fbank==1.22.3 \
     --hash=sha256:0a332ed459f02532f35ea7fe6d55af9e90a636c0b95493dadd7d3284e844b3c2 \
     --hash=sha256:0ba6f11d8eb686503ee034816f7fcfa0aa14f18d27ed683b43d020080d9cd009 \
@@ -2915,7 +2904,7 @@ kaldi-native-fbank==1.22.3 \
     --hash=sha256:f5a44b4a83cf9bf13d3f77858928068b06d3ec2238c27ff2e39393fbf7749c9f \
     --hash=sha256:f74b85948328ab4b4c88522f98a59f83dd5295443b08483e945c7de2c35e5dcc \
     --hash=sha256:fc78134a588fd6f7ce61e45495524c1bb6c487ffe1c1bc7360b8084f2b0d6921
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 kaleido==1.0.0 \
     --hash=sha256:502d8ba64737924efaf5e94c2736745bcc7c926e6cc535838be36c0fc06330bd \
     --hash=sha256:a7e8bd95648378d2746f6c86084d419d15f95b1ec7bb0ec810289b7feb25b18d
@@ -3042,9 +3031,7 @@ kiwisolver==1.5.0 \
 lark==1.2.2 \
     --hash=sha256:c2276486b02f0f1b90be155f2c8ba4a8e194d42775786db622faccd652d8e80c \
     --hash=sha256:ca807d0162cd16cef15a8feecb862d7319e7a09bdb13aef927968e45040fed80
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 lazy-loader==0.4 \
     --hash=sha256:342aa8e14d543a154047afb4ba8ef17f5563baad3fc610d7b15b213b0f119efc \
     --hash=sha256:47c75182589b91a4e1a85a136c074285a5ad4d9f39c63e0d7fb76391c4574cd1
@@ -3058,8 +3045,8 @@ libnacl==2.1.0 \
 librosa==0.10.2.post1 \
     --hash=sha256:cd99f16717cbcd1e0983e37308d1db46a6f7dfc2e396e5a9e61e6821e44bd2e7 \
     --hash=sha256:dc882750e8b577a63039f25661b7e39ec4cfbacc99c1cffba666cd664fb0a7a0
-    # via -r requirements/test/rocm.in
-llguidance==1.7.5 \
+    # via -r rocm.in
+llguidance==1.7.5 ; platform_machine == "x86_64" or platform_machine == "arm64" or platform_machine == "aarch64" or platform_machine == "ppc64le" or platform_machine == "s390x" \
     --hash=sha256:01da2d40298c3487c188a0b3c5fba982afcccf8ed0ec523b05b6210ffa745036 \
     --hash=sha256:15ebd8b87754fb904c3029d0d7a1b1a726054d92a072c4b1e16ed6d447008ca0 \
     --hash=sha256:1d02dbc64dc1afc2d2cb7e5e868886527f8c6f088062e87d81bbad6212e22500 \
@@ -3076,9 +3063,7 @@ llguidance==1.7.5 \
     --hash=sha256:dd805b8b0302edfa18c9b2b4b9ecf7f7b23f5bea42a44a91e7706238ffd21cef \
     --hash=sha256:ea659e51f57b28af93a742f748f65be92264bdcf6bdab413b08d7a539e33550a \
     --hash=sha256:f1f9fb791a8def3de4feec9c40b5d4bd63b9f06e5315586a209d567467443293
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 llvmlite==0.47.0 \
     --hash=sha256:003bcf7fa579e14db59c1a1e113f93ab8a06b56a4be31c7f08264d1d4072d077 \
     --hash=sha256:12a69d4bb05f402f30477e21eeabe81911e7c251cecb192bed82cd83c9db10d8 \
@@ -3106,16 +3091,14 @@ llvmlite==0.47.0 \
     --hash=sha256:f9d118bc1dd7623e0e65ca9ac485ec6dd543c3b77bc9928ddc45ebd34e1e30a7 \
     --hash=sha256:fa1cbd800edd3b20bc141521f7fd45a6185a5b84109aa6855134e81397ffe72b
     # via numba
-lm-eval==0.4.12 \
+lm-eval[api]==0.4.12 \
     --hash=sha256:02971ff68284dd14cfa7fce9310a58452c4162e8d413ba96aa7988a0ff9352ef \
     --hash=sha256:45938d7c8024d5eee5c8a0da36abe7cc09c252413c577cf81666f0fcd28b4345
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 lm-format-enforcer==0.11.3 \
     --hash=sha256:cf586350875def1ae7a8fba84fcbbfc8371424b6c9d05c1fcba70aa233fbf06f \
     --hash=sha256:e68081c108719cce284a9bcc889709b26ffb085a1945b5eba3a12cfa96d528da
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 logistro==2.0.1 \
     --hash=sha256:06ffa127b9fb4ac8b1972ae6b2a9d7fde57598bf5939cd708f43ec5bba2d31eb \
     --hash=sha256:8446affc82bab2577eb02bfcbcae196ae03129287557287b6a070f70c1985047
@@ -3304,15 +3287,14 @@ lxml==6.1.3 \
     --hash=sha256:febd35ef45f603c2d74b74655efdbf45e14f55fc0aef4ac82b663ca829b283e0 \
     --hash=sha256:ff88a92cafde90888511242d1c54afcc1a8adbb6dc0a88fa7f87e29e92400d4a
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   blobfile
-    #   gpt-oss
     #   sacrebleu
 mako==1.4.3 \
     --hash=sha256:723296007c870bfd6b3f0c3230dba7198096e5269297ebf5e4eff9e7ffa39d4f \
     --hash=sha256:cd6537fe88d5fec315c55c2f8529bc4ce7a9a352ad7db3eeaa6a66e2dd4ec37a
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   alembic
 markdown-it-py==4.0.0 \
     --hash=sha256:87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147 \
@@ -3468,7 +3450,7 @@ matplotlib==3.10.8 \
     --hash=sha256:f97aeb209c3d2511443f8797e3e5a569aebb040d4f8bc79aa3ee78a8fb9e3dd8 \
     --hash=sha256:f9b587c9c7274c1613a30afabf65a272114cd6cdbe67b3406f818c79d7ab2e2a \
     --hash=sha256:fb061f596dad3a0f52b60dc6a5dec4a0c300dec41e058a7efe09256188d170b7
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 mbstrdecoder==1.1.4 \
     --hash=sha256:03dae4ec50ec0d2ff4743e63fdbd5e0022815857494d35224b60775d3d934a8c \
     --hash=sha256:8105ef9cf6b7d7d69fe7fd6b68a2d8f281ca9b365d7a9b670be376b2e6c81b21
@@ -3479,9 +3461,7 @@ mbstrdecoder==1.1.4 \
 mcp==2.3.0 \
     --hash=sha256:8b147a50441cf059dc88c684e0aeed3687f0aa0f39c6cde7b90330effd2b34d8 \
     --hash=sha256:dd0c44c089d16453e8ae31a3877a0054d7a2314caaa81f5e0541b9b1734b2377
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 mcp-types==2.3.0 \
     --hash=sha256:968efdbdaedfab06adae40d378a34395f1090c5921d4be3c9cde283aaf76d91d \
     --hash=sha256:d1e46549edb35ee19a94940fcee6d1addd7e589ab7ea92dda83f5d84781fc362
@@ -3490,13 +3470,13 @@ mdurl==0.1.2 \
     --hash=sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8 \
     --hash=sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
     # via markdown-it-py
-mistral-common==1.13.0 \
+mistral-common[audio,image,opencv,soundfile,soxr]==1.13.0 \
     --hash=sha256:6304455b69ae9ca02cddb9bb3bb888ab8dcbe3945a3cafe3368897795611993d \
     --hash=sha256:8559b6e22e9b15d4d7445ae34db6d27578f3a6c0e3d74c5fd57b4bf2db543333
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   -r requirements/test/rocm.in
+    #   -r ../common.txt
+    #   -r rocm.in
+    #   mistral-common
 ml-dtypes==0.5.4 \
     --hash=sha256:0d2ffd05a2575b1519dc928c0b93c06339eb67173ff53acb00724502cda231cf \
     --hash=sha256:11942cbf2cf92157db91e5022633c0d9474d4dfd813a909383bd23ce828a4b7d \
@@ -3541,9 +3521,7 @@ ml-dtypes==0.5.4 \
 model-hosting-container-standards==0.1.14 \
     --hash=sha256:b6cf4c46d88ce6acd6e543a578bb88ffd55d1179a7c09c22e61ae1d8a567c564 \
     --hash=sha256:d678be6745899b8ba1e8246c96b101e7802a6a4ea3fb5d90ae8d6eb4204e84c6
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 more-itertools==10.8.0 \
     --hash=sha256:52d4362373dcf7c52546bc4af9a86ee7c4579df9a8dc268be0a2f949d376cc9b \
     --hash=sha256:f638ddf8a1a0d134181275fb5d58b086ead7c6a72429ad725c67503f13ba30bd
@@ -3657,7 +3635,7 @@ msgpack==1.2.3 \
     --hash=sha256:fafc3b8898b432b841d30a61082c599fa7f4d06885f9dc58ad72259e12059fa6 \
     --hash=sha256:fcc6800daac4922960f6eeb7a0dda3dd4105e0bf7bce0e83ebc465a78cb7bdba
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   librosa
     #   ray
 msgspec==0.21.0 \
@@ -3710,11 +3688,11 @@ msgspec==0.21.0 \
     --hash=sha256:f2a80db664c75f336cff5e17df7861c23fa47bec6f96c2c3f94be773cc675821 \
     --hash=sha256:f851f5d4356934086657dfae231115cbcfc5796e9aac604441d2a506f5c78d33 \
     --hash=sha256:f920711fdcfe4d2aba3e1b4b6b0f67f0eb07beca22881d5bd234e7c8d9407a3a
-    # via -r requirements/test/../common.txt
-mteb==2.11.5 \
+    # via -r ../common.txt
+mteb[bm25s]==2.11.5 \
     --hash=sha256:4109b63f308b32bdc52f1d935bc0f76e2671c6d73964bac157afbcacf1ea5a50 \
     --hash=sha256:bb1a3470110a9b94463c13fdaf1e7639d1a10f8531f7c97ca18be40d756d358f
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 multidict==7.1.0 \
     --hash=sha256:0179698c3c913eb64f32397083747fad20ed0f0a2b7469a08cd1a8a95d14d90e \
     --hash=sha256:034b0dc1b7fb8279599c5d8563f86abb4d2454735b06544ecab23c54572ad2bd \
@@ -3888,8 +3866,7 @@ multidict==7.1.0 \
     --hash=sha256:fed6b7705d49dd07e5e0dd5f5c873fc44047e92d714299b13245b5fecac49d01 \
     --hash=sha256:ff15531a376dc6f35984443fd1429e4b150c36ce27633e7cc52a9e5318546e20
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   aiohttp
     #   yarl
 multiprocess==0.70.16 \
@@ -3906,7 +3883,7 @@ multiprocess==0.70.16 \
     --hash=sha256:e7b9d0f307cd9bd50851afaac0dba2cb6c44449efff697df7c7645f7d3f2be3a \
     --hash=sha256:fc0544c531920dde3b00c29863377f87e1632601092ea2daca74e4beb40faa2e
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   datasets
     #   evaluate
 mypy-extensions==1.1.0 \
@@ -3943,17 +3920,17 @@ ninja==1.13.0 \
     --hash=sha256:fa2a8bfc62e31b08f83127d1613d10821775a0eb334197154c4d6067b7068ff1 \
     --hash=sha256:fb46acf6b93b8dd0322adc3a4945452a4e774b75b91293bafcc7b7f8e6517dfa \
     --hash=sha256:fb8ee8719f8af47fed145cced4a85f0755dd55d45b2bddaf7431fa89803c5f3e
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 nltk==3.10.3 \
     --hash=sha256:bb9327a461c3811c2fa4900e03840401f2126adfb30c0072827c433bd2444ea4 \
     --hash=sha256:ff9598a8e20518ee0d557745890cc4435b9578489e2dcbc69c4f81fa060caf7c
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   rouge-score
 num2words==0.5.14 \
     --hash=sha256:1c8e5b00142fc2966fd8d685001e36c4a9911e070d1b120e1beb721fa1edb33d \
     --hash=sha256:b066ec18e56b6616a3b38086b5747daafbaa8868b226a36127e0451c0cf379c6
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 numba==0.65.0 \
     --hash=sha256:032b0b8e879512cd424d79eed6d772a1399c6387ded184c2cf3cc22c08d750a6 \
     --hash=sha256:05c0a9fdf75d85f57dee47b719e8d6415707b80aae45d75f63f9dc1b935c29f7 \
@@ -3981,8 +3958,7 @@ numba==0.65.0 \
     --hash=sha256:edad0d9f6682e93624c00125a471ae4df186175d71fd604c983c377cdc03e68b \
     --hash=sha256:ee336b398a6fca51b1f626034de99f50cb1bd87d537a166275158a3cee744b82
     # via
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   librosa
 numpy==2.2.6 \
     --hash=sha256:038613e9fb8c72b0a41f025a7e4c3f0b7a1b5d768ece4796b674c8f3fe13efff \
@@ -4041,7 +4017,7 @@ numpy==2.2.6 \
     --hash=sha256:fe27749d33bb772c80dcd84ae7e8df2adc920ae8297400dabec45f0dedb3f6de \
     --hash=sha256:fee4236c876c4e8369388054d02d0e9bb84821feb1a64dd59e137e6511a551f8
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   albumentations
     #   bitsandbytes
@@ -4054,7 +4030,6 @@ numpy==2.2.6 \
     #   evaluate
     #   fastparquet
     #   genai-perf
-    #   gpt-oss
     #   imagehash
     #   imageio
     #   librosa
@@ -4091,17 +4066,99 @@ numpy==2.2.6 \
     #   tritonclient
     #   vocos
     #   xgrammar
+nvidia-cublas==13.4.1.3 \
+    --hash=sha256:4eb1472bf92b741e7cf24da7978dde251b58ddec2092d9f6a04f3623eb4e9a15 \
+    --hash=sha256:7e7f780caf07bde7b36b0d25bdad29e8ccbacfc4b75066907bdb601af1e6d4aa \
+    --hash=sha256:a5917cb642cfb07f4a0231ee16aec7e2e0357d8cb8b1b78a0c9c68dba3e6afc7
+    # via
+    #   cuda-toolkit
+    #   nvidia-cudnn-cu13
+    #   nvidia-cusolver
+nvidia-cuda-cccl==13.3.5.0.6 \
+    --hash=sha256:6e1f96b71d582171cebd9ae1d7ffbfc726e112a0a41aef77b9ead500aad7e0a2 \
+    --hash=sha256:6f30b8076b3e69951c459c94ae190bde51924b320076ebaec376d36848b4c76e \
+    --hash=sha256:a729999ca75633c6e2c7f48804fa982e00d75e5416284d010fadf82646c1d854 \
+    --hash=sha256:d5230098fa2df5021e1a00c0c4eee41797671a91119d31e892463e5ccf3ee326
+    # via nvidia-nvshmem-cu13
+nvidia-cuda-cupti==13.2.86 \
+    --hash=sha256:10837e2910753a7726c0243aa113e2bd65c0edee6f6f3e097db1757a8eac2c9e \
+    --hash=sha256:8fa29f15dd8336181f961764d9d95236fc6b931dd0c8fcf8cd70aab0c310b586 \
+    --hash=sha256:d9a5c133f73fcb9013f3ada0da6fb54d4117618d81f3f5a0419417ea6ee829d4
+    # via cuda-toolkit
+nvidia-cuda-nvrtc==13.2.86 \
+    --hash=sha256:1e5d7b411a2eb83f5c71c98d58133a763fc9fa86a4241ee320c5c4782d9ad1fd \
+    --hash=sha256:8111c5130e967b78222ea2124145f8efe9ce201b752b2579a2513100a53be1c5 \
+    --hash=sha256:bf070582c2d8b03f681cea8d34a9de900d808607deb813a826ecb3a585606f9a
+    # via
+    #   cuda-toolkit
+    #   nvidia-cublas
+nvidia-cuda-runtime==13.2.86 \
+    --hash=sha256:3498247680dfddce31bad102af7e3e26fc795342a3cac64722bb0fa95e7f60f0 \
+    --hash=sha256:37844957894bfdecf90243568d21a2cb251b66106915b71459a23c8e6ef2da69 \
+    --hash=sha256:b26f5dd86e67f0eb404ae679185e1c49fe546fa9a47b32dee31312f65ccfe764
+    # via cuda-toolkit
+nvidia-cudnn-cu13==9.26.0.51 \
+    --hash=sha256:8e37a83d7dd7c2663afcae38b1c95c5e9e7c9754f313800da95ca81439fa37f9 \
+    --hash=sha256:8e5b4f5eccff721416f70ecf4353172fc4d5cdd8ca869fe6f983a4a5b0147b20 \
+    --hash=sha256:9c976d539786698c71d6bcdbe2053b7485fae062ff7e1215d2f2ff67b1a2149a
+    # via torch
+nvidia-cufft==12.2.0.57 \
+    --hash=sha256:1ed438568ae1088ba2c25789d10205d4104b8b140b7bd942e39a787947a0fb74 \
+    --hash=sha256:34da27fadf3979b0b042c43823f0530be8408b86df31ee0108e1ca0b621d4ef6 \
+    --hash=sha256:89b78b2b60d6ca1fb7dab7d1a4af135d69d586d18a216ca84e51db5901cd41d0
+    # via cuda-toolkit
+nvidia-cufile==1.17.1.22 \
+    --hash=sha256:87feaf8c3ad20d3d03a01933181801ff6892bace5c8f0b1e4b48f319d3e62d36 \
+    --hash=sha256:bec33d7f1f12691dce330275246587569c2ed90b1ce43b0f94b3e1ce9268744b
+    # via cuda-toolkit
+nvidia-cusolver==12.2.0.11 \
+    --hash=sha256:364511c9974ef1fcde2ca197caebfe0994ece2cb33bc27117eeb88b8cee5c46d \
+    --hash=sha256:8be097fca28de6be0990ab216ee9b804dd51077e1d1d83acf6c9850650bdc64d \
+    --hash=sha256:fab5778f6769947389a1a6abc07e635576825a08c0ffc68c3ae7f1392c794b42
+    # via cuda-toolkit
+nvidia-cusparse==12.7.10.12 \
+    --hash=sha256:25907c75e4db1581685f06f61cc6cdecc04611765516a52373e0a18ebd69fa00 \
+    --hash=sha256:597eff2cd83e3ab1d1e3a0dce9c9c879d77cf64ec2659bfdb5af6a5d02e7aaa9 \
+    --hash=sha256:6b1e82056a0865c5b4f5da6adbebb15244e9a2b8aeea0838a9cf725e16523c53
+    # via
+    #   cuda-toolkit
+    #   nvidia-cusolver
+nvidia-cusparselt-cu13==0.8.1 \
+    --hash=sha256:4dca476c50bf4780d46cd0bfbd82e2bc10a08e4fef7950917ce8d7578d22a23f \
+    --hash=sha256:786ce87568c303fadb5afcc7102d454cd3040d75f6f8626f5db460d1871f4dd0 \
+    --hash=sha256:dccbd362f91a7b9024d1f55ee9f548ac065027ff15d8c8b0db889ab3a8f31215
+    # via torch
+nvidia-nccl-cu13==2.30.7 \
+    --hash=sha256:ca786ffa5a647c75d4d1f5cc72a6c4f537947e2ba8823d7c8aaf768e7a7b9f77 \
+    --hash=sha256:cefa7fdb9710efd0f39c5f1be1d61ff6fc9a996c451265bd7fbdcf9455ed4b50
+    # via torch
+nvidia-nvjitlink==13.5.37 \
+    --hash=sha256:280d7cb9649704145f074b8dbde500de04ce02d0872e066e20a83c17bcaa93eb \
+    --hash=sha256:4465d4e8f2212118220b580c82523c5654f93a62906bd51d29d79bdfc12376c1 \
+    --hash=sha256:893f6f9a55b2720ed94913b5ba3332e972da8c78dfa2863d0244403dbd528ffc \
+    --hash=sha256:eb30348ae64c525180a280025dd12a089c3e2e1dc4e19cdd58f68c6edc622404
+    # via
+    #   cuda-toolkit
+    #   nvidia-cufft
+    #   nvidia-cusolver
+    #   nvidia-cusparse
+nvidia-nvshmem-cu13==3.7.2 \
+    --hash=sha256:0e748308b9e0a8a8d81859353f3e6c98fbe85a85f652a915a2ba60149a0bd124 \
+    --hash=sha256:b9a4f843c62b5dded8ad33fd6d220e007dcd39f06cee549292f5ba14ce4c235c
+    # via torch
+nvidia-nvtx==13.2.86 \
+    --hash=sha256:1c6ae1be92fba569dd271f7b9b3056f99f5642726dc6c53d1b93ae4110c398fb \
+    --hash=sha256:7f3f430a87bb1e2db3371832d21a5c1efcf77bef7cacfd772fd71649e121cd58 \
+    --hash=sha256:968ce72baee2a01791c7d3254000eac81f24677b0b91c62d21b449a1f309c245
+    # via cuda-toolkit
 open-clip-torch==2.32.0 \
     --hash=sha256:0220bc111162527eb738c1fe20dbfd6ea45dfe44726b54a4de18d3945d8f2f00 \
     --hash=sha256:80b35b43e37afc2b6173aa5ab0ad68744ab3a3211e624f72dfe743a162707637
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 openai==2.31.0 \
     --hash=sha256:43ca59a88fc973ad1848d86b98d7fac207e265ebbd1828b5e4bdfc85f79427a5 \
     --hash=sha256:44e1344d87e56a493d649b17e2fac519d1368cbb0745f59f1957c4c26de50a0a
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   gpt-oss
+    # via -r ../common.txt
 opencensus==0.11.4 \
     --hash=sha256:a18487ce68bc19900336e0ff4655c5a116daf10c1b3685ece8d971bddad6a864 \
     --hash=sha256:cbef87d8b8773064ab60e5c2a1ced58bbaa38a6d052c41aec224958ce544eff2
@@ -4120,20 +4177,18 @@ opencv-python-headless==4.13.0.92 \
     --hash=sha256:a7cf08e5b191f4ebb530791acc0825a7986e0d0dee2a3c491184bd8599848a4b \
     --hash=sha256:eb60e36b237b1ebd40a912da5384b348df8ed534f6f644d8e0b4f103e272ba7d
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   albumentations
     #   mistral-common
 openpyxl==3.1.5 \
     --hash=sha256:5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2 \
     --hash=sha256:cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 opentelemetry-api==1.40.0 \
     --hash=sha256:159be641c0b04d11e9ecd576906462773eb97ae1b657730f0ecf64d32071569f \
     --hash=sha256:82dd69331ae74b06f6a874704be0cfaa49a1650e1537d4a813b86ecef7d0ecf9
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   mcp
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
@@ -4143,9 +4198,7 @@ opentelemetry-api==1.40.0 \
 opentelemetry-exporter-otlp==1.40.0 \
     --hash=sha256:48c87e539ec9afb30dc443775a1334cc5487de2f72a770a4c00b1610bf6c697d \
     --hash=sha256:7caa0870b95e2fcb59d64e16e2b639ecffb07771b6cd0000b5d12e5e4fef765a
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 opentelemetry-exporter-otlp-proto-common==1.40.0 \
     --hash=sha256:1cbee86a4064790b362a86601ee7934f368b81cd4cc2f2e163902a6e7818a0fa \
     --hash=sha256:7081ff453835a82417bf38dccf122c827c3cbc94f2079b03bba02a3165f25149
@@ -4176,8 +4229,7 @@ opentelemetry-sdk==1.40.0 \
     --hash=sha256:18e9f5ec20d859d268c7cb3c5198c8d105d073714db3de50b593b8c1345a48f2 \
     --hash=sha256:787d2154a71f4b3d81f20524a8ce061b7db667d24e46753f32a7bc48f1c1f3f1
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
     #   opentelemetry-exporter-prometheus
@@ -4192,9 +4244,7 @@ opentelemetry-semantic-conventions==0.61b0 \
 opentelemetry-semantic-conventions-ai==0.5.1 \
     --hash=sha256:153906200d8c1d2f8e09bd78dbef526916023de85ac3dab35912bfafb69ff04c \
     --hash=sha256:25aeb22bd261543b4898a73824026d96770e5351209c7d07a0b1314762b1f6e4
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 optuna==3.6.1 \
     --hash=sha256:146e530b57b4b9afd7526b3e642fbe65491f7e292b405913355f8e438e361ecf \
     --hash=sha256:b32e0490bd6552790b70ec94de77dd2855057c9e229cd9f4da48fe8a31c7f1cc
@@ -4275,9 +4325,8 @@ orjson==3.11.7 \
     --hash=sha256:f50979824bde13d32b4320eedd513431c921102796d86be3eee0b58e58a3ecd1 \
     --hash=sha256:f904c24bdeabd4298f7a977ef14ca2a022ca921ed670b92ecd16ab6f3d01f867
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   -r requirements/test/rocm.in
+    #   -r ../common.txt
+    #   -r rocm.in
     #   genai-perf
     #   kaleido
 oss-harmony==0.0.11 \
@@ -4294,9 +4343,7 @@ oss-harmony==0.0.11 \
     --hash=sha256:f1f74ef7f8be32fa1dcfe1644839af5f0873acce78b5668c2aa39f26d83218ff \
     --hash=sha256:f215934b05f3a7658e0cf30cf92bc25f4aed125a693529c53dd97325ecfbf7ef \
     --hash=sha256:fd91609eef825f342ae7ac990651cfebcf28aac6b6ad1186bf37c5b593cdf950
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 outlines-core==0.2.14 \
     --hash=sha256:056f656ea6e4807338963377afb50b9d936593ba3545a819f1aba56fd6e14920 \
     --hash=sha256:060a0174a6262bfd378763f210e374e52011776849a3a767df9863fb6839c142 \
@@ -4347,14 +4394,11 @@ outlines-core==0.2.14 \
     --hash=sha256:f0e5037153b5b3abfb617f6dfdc3ff28b6fab50f0de5936ea6995f5675d23e0b \
     --hash=sha256:f753edd430ac27e6dcde5a614665888db72b78c666aa160c478afd1eb986fb8b \
     --hash=sha256:fd7d432817978ea474de428ed6ca5ed3195812f8cfb787b85fb5ec0a51a440d2
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 packaging==26.3 \
     --hash=sha256:94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79 \
     --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c
     # via
-    #   -c requirements/rocm.txt
     #   accelerate
     #   bitsandbytes
     #   black
@@ -4432,12 +4476,11 @@ pandas==3.0.1 \
     #   evaluate
     #   fastparquet
     #   genai-perf
-    #   gpt-oss
     #   statsmodels
 partial-json-parser==0.2.1.1.post7 \
     --hash=sha256:145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae \
     --hash=sha256:86590e1ba6bcb6739a2dfc17d2323f028cb5884f4c6ce23db376999132c9a922
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 pathspec==1.0.4 \
     --hash=sha256:0210e2ae8a21a9137c0d470578cb0e595af87edaa6ebf12ff176f14a02e0e645 \
     --hash=sha256:fb6ae2fd4e7c921a165808a552060e722767cfa526f99ca5156ed2ce45a5c723
@@ -4453,11 +4496,11 @@ patsy==1.0.2 \
 peft==0.21.1 \
     --hash=sha256:6b99d659a33acc17295c0838f1e58267337b8c30ac9aef0c8f2d48364d3f24e2 \
     --hash=sha256:95f239f84da1919a6d0c64c4049650a6a79804e3a87c78f35c597da771e31f68
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 perceptron==0.1.4 \
     --hash=sha256:62fd190efb74925e2cc33c0cd38761e19959be3bdb7b24fbf9e3386d6961f690 \
     --hash=sha256:f490a6df6c15167e91e1a528601cae98ce99a30991cf792f9ef83ebc15d335c4
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 perf-analyzer==0.1.0 \
     --hash=sha256:3c7d7b790b0fbcfcd478063f7d1450dbaa5e71c127a25ee810841d1a06bc5748
     # via genai-perf
@@ -4546,8 +4589,7 @@ pillow==13.0.0 \
     --hash=sha256:ff3fe9eb621fbb9db4c4be33ab946f6bac5f98ab50ca8d3260503653656c961b \
     --hash=sha256:ffea6b2986a797c84b6d1d27d4f43e0b83c73fc16281a930891cd237cf0d08fe
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   genai-perf
     #   imagehash
     #   imageio
@@ -4562,14 +4604,13 @@ platformdirs==4.13.5 \
     --hash=sha256:53d3ec4280b815c1e0b02edad7f9ee8fda1ba9c0865dd9c2e6e63849ce82fc1e
     # via
     #   black
-    #   jupyter-core
     #   pooch
     #   virtualenv
 plotly==6.6.0 \
     --hash=sha256:8d6daf0f87412e0c0bfe72e809d615217ab57cc715899a1e5145135a7800d1d0 \
     --hash=sha256:b897f15f3b02028d69f755f236be890ba950d0a42d7dfc619b44e2d8cea8748c
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   genai-perf
 pluggy==1.6.0 \
     --hash=sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3 \
@@ -4603,22 +4644,19 @@ portalocker==3.2.0 \
 pqdm==0.2.0 \
     --hash=sha256:0da33a22ebee349a047abf8ef7fd00d85403638101d5e374b421a74188231b62 \
     --hash=sha256:d99d01fe498d327b440ebfe08c14c84e0dc9ecce6172ef9a31f96bb1aaf4e9e3
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 prometheus-client==0.24.1 \
     --hash=sha256:150db128af71a5c2482b36e588fc8a6b95e498750da4b17065947c16070f4055 \
     --hash=sha256:7e0ced7fbbd40f7b84962d5d2ab6f17ef88a72504dcf7c0b40737b43b2a461f9
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   opentelemetry-exporter-prometheus
     #   prometheus-fastapi-instrumentator
     #   ray
 prometheus-fastapi-instrumentator==8.0.0 \
     --hash=sha256:c31ed192db077e75467b28b2fe5055362517f53369b798cb8dac9ff85f3f1c38 \
     --hash=sha256:e3c967c402124dfe81cf5aad35208d9f96db5452c6cb752350d9358ca0a96198
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 propcache==0.4.1 \
     --hash=sha256:0002004213ee1f36cfb3f9a42b5066100c44276b9b72b4e1504cddd3d692e86e \
     --hash=sha256:0013cb6f8dde4b2a2f66903b8ba740bdfe378c943c4377a200551ceb27f379e4 \
@@ -4749,7 +4787,7 @@ proto-plus==1.27.1 \
     --hash=sha256:912a7460446625b792f6448bade9e55cd4e41e6ac10e27009ef71a7f317fa147 \
     --hash=sha256:e4643061f3a4d0de092d62aa4ad09fa4756b2cbb89d4627f3985018216f9fefc
     # via google-api-core
-protobuf==6.33.6 \
+protobuf==6.33.6 ; platform_machine != "s390x" \
     --hash=sha256:0cd27b587afca21b7cfa59a74dcbd48a50f0a6400cfb59391340ad729d91d326 \
     --hash=sha256:77179e006c476e69bf8e8ce866640091ec42e1beb80b213c3900006ecfba6901 \
     --hash=sha256:7d29d9b65f8afef196f8334e80d6bc1d5d4adedb449971fefd3723824e6e77d3 \
@@ -4761,8 +4799,7 @@ protobuf==6.33.6 \
     --hash=sha256:e9db7e292e0ab79dd108d7f1a94fe31601ce1ee3f7b79e0692043423020b0593 \
     --hash=sha256:f443a394af5ed23672bc6c486be138628fbe5c651ccbc536873d7da23d1868cf
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   google-api-core
     #   googleapis-common-protos
     #   grpcio-reflection
@@ -4793,7 +4830,7 @@ psutil==7.2.2 \
     --hash=sha256:eed63d3b4d62449571547b60578c5b2c4bcccc5387148db46e0c2313dad0ee00 \
     --hash=sha256:fd04ef36b4a6d599bbdb225dd1d3f51e00105f6d48a28f006da7f9822f2606d8
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   peft
     #   tensorizer
@@ -4805,7 +4842,7 @@ py==1.11.0 \
 py-cpuinfo==9.0.0 \
     --hash=sha256:3cdbbf3fac90dc6f118bfd64384f309edeadd902d7c8fb17f02ffa1fc3f49690 \
     --hash=sha256:859625bc251f64e21f077d099d4162689c762b5d6a4c3c97553d56241c9674d5
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 py-spy==0.4.1 \
     --hash=sha256:1fb8bf71ab8df95a95cc387deed6552934c50feef2cf6456bc06692a5508fd0c \
     --hash=sha256:4972c21890b6814017e39ac233c22572c4a61fd874524ebc5ccab0f2237aee0a \
@@ -4868,14 +4905,14 @@ pyarrow==23.0.1 \
     --hash=sha256:fa8e51cb04b9f8c9c5ace6bab63af9a1f88d35c0d6cbf53e8c17c098552285e1 \
     --hash=sha256:fed7020203e9ef273360b9e45be52a2a47d3103caf156a30ace5247ffb51bdbd
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   datasets
     #   genai-perf
-pyasn1==0.6.4 \
-    --hash=sha256:9c447d8431c947fe4c8febc4ed9e760bc29011a5b01e5c74b67025bd9fb8ce81 \
-    --hash=sha256:deda9277cfd454080ec40b207fb6df82206a3a2688735233cdcd8d3d565f088b
+pyasn1==0.6.5 \
+    --hash=sha256:4017b0fce125096b8573b39c989fdb1a4b19cf761e683398184550fea0e66587 \
+    --hash=sha256:6b11616a6bcf3a40e635f082bb232fa57b5e0dd7f517bd7ddd69ec3794508a47
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   pyasn1-modules
 pyasn1-modules==0.4.2 \
     --hash=sha256:29253a9207ce32b64c3ac6600edc75368f98473906e8fd1043bd6b5b1de2c14a \
@@ -5097,7 +5134,7 @@ pybase64==1.4.3 \
     --hash=sha256:fb68a3a7031096d01b13ece0b341f14073382f76dd302599fbe9c738981ce197 \
     --hash=sha256:fb852f900e27ffc4ec1896817535a0fa19610ef8875a096b59f21d0aa42ff172 \
     --hash=sha256:fc3fefa4ac57a030e1982b6fd2df71ae69460465227b057b90dadd53c60575ea
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 pycountry==26.2.16 \
     --hash=sha256:115c4baf7cceaa30f59a4694d79483c9167dbce7a9de4d3d571c5f3ea77c305a \
     --hash=sha256:5b6027d453fcd6060112b951dd010f01f168b51b4bf8a1f1fc8c95c8d94a0801
@@ -5149,12 +5186,11 @@ pycryptodomex==3.23.0 \
     --hash=sha256:fdfac7cda115bca3a5abb2f9e43bc2fb66c2b65ab074913643803ca7083a79ea \
     --hash=sha256:febec69c0291efd056c65691b6d9a339f8b4bc43c6635b8699471248fe897fea
     # via blobfile
-pydantic==2.12.5 \
+pydantic[email]==2.12.5 \
     --hash=sha256:4d351024c75c0f085a9febbb665ce8c0c6ec5d30e903bdb6394b7ede26aebb49 \
     --hash=sha256:e561593fccf61e8a20fc46dfc2dfe075b8be7d0188df33f221ad1f0139180f9d
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   albumentations
     #   anthropic
     #   cohere
@@ -5162,7 +5198,6 @@ pydantic==2.12.5 \
     #   datamodel-code-generator
     #   fastapi
     #   fastapi-cloud-cli
-    #   gpt-oss
     #   lm-format-enforcer
     #   mcp
     #   mcp-types
@@ -5300,7 +5335,7 @@ pydantic-core==2.41.5 \
     # via
     #   cohere
     #   pydantic
-pydantic-extra-types==2.11.1 \
+pydantic-extra-types[pycountry]==2.11.1 \
     --hash=sha256:1722ea2bddae5628ace25f2aa685b69978ef533123e5638cfbddb999e0100ec1 \
     --hash=sha256:46792d2307383859e923d8fcefa82108b1a141f8a9c0198982b3832ab5ef1049
     # via
@@ -5310,20 +5345,20 @@ pydantic-settings==2.15.0 \
     --hash=sha256:0ba092c291c94baceb5eff768aa0d56400a457585bc0175925a5a5510303da42 \
     --hash=sha256:694b793e84f766ba76a90ebdefc01d0a9a045dab0382bee70393da93712ad117
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   fastapi
 pygments==2.21.0 \
     --hash=sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9 \
     --hash=sha256:610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   pytest
     #   rich
-pyjwt==2.15.1 \
+pyjwt[crypto]==2.15.1 \
     --hash=sha256:42d59d631f7768a1028a64c7ff581a9bf7519804daf91fc5b6c56e30eec5e193 \
     --hash=sha256:4f259e80cdfb6b3fc18a7de51fd1ef9ec79652f25019bae68975ca2468a34df8
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   mcp
     #   msal
 pyparsing==3.3.2 \
@@ -5426,7 +5461,7 @@ pytest==9.1.0 \
     --hash=sha256:41dd9148c08072446394cefd3d79701701335a9f4cae69ba92e39f6c7f5c061c \
     --hash=sha256:8ebb0e7888bdf2bdfc602ec51f8f62d50200af37356c74e503c79a94f5c81f32
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   buildkite-test-collector
     #   genai-perf
     #   pytest-asyncio
@@ -5440,15 +5475,15 @@ pytest==9.1.0 \
 pytest-asyncio==1.4.0 \
     --hash=sha256:933ca923a23075a87fb7070c0ec272a6848489824d887c85c812670932835aa1 \
     --hash=sha256:c6c0d2259945122819f171a32ecea2c349ead889ee28176caaf492143424be42
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 pytest-cov==6.3.0 \
     --hash=sha256:35c580e7800f87ce892e687461166e1ac2bcb8fb9e13aea79032518d6e503ff2 \
     --hash=sha256:440db28156d2468cafc0415b4f8e50856a0d11faefa38f30906048fe490f1749
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 pytest-forked==1.6.0 \
     --hash=sha256:4dafd46a9a600f65d822b8f605133ecf5b3e1941ebb3588e943b4e3eb71a5a3f \
     --hash=sha256:810958f66a91afb1a1e2ae83089d8dc1cd2437ac96b12963042fbb9fb4d16af0
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 pytest-mock==3.15.1 \
     --hash=sha256:0a25e2eb88fe5168d535041d09a4529a188176ae608a6d249ee65abc0949630d \
     --hash=sha256:1849a238f6f396da19762269de72cb1814ab44416fa73a8686deac10b0d87a0f
@@ -5456,21 +5491,20 @@ pytest-mock==3.15.1 \
 pytest-rerunfailures==14.0 \
     --hash=sha256:4197bdd2eaeffdbf50b5ea6e7236f47ff0e44d1def8dae08e409f536d84e7b32 \
     --hash=sha256:4a400bcbcd3c7a4ad151ab8afac123d90eca3abe27f98725dc4d9702887d2e92
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 pytest-shard==0.1.2 \
     --hash=sha256:407a1df385cebe1feb9b4d2e7eeee8b044f8a24f0919421233159a17c59be2b9 \
     --hash=sha256:b86a967fbfd1c8e50295095ccda031b7e890862ee06531d5142844f4c1d1cd67
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 pytest-timeout==2.3.1 \
     --hash=sha256:12397729125c6ecbdaca01035b9e5239d4db97352320af155b3f5de1ba5165d9 \
     --hash=sha256:68188cb703edfc6a18fad98dc25a3c61e9f24d644b0b70f33af545219fc7813e
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 python-dateutil==2.9.0.post0 \
     --hash=sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3 \
     --hash=sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427
     # via
     #   botocore
-    #   jupyter-client
     #   matplotlib
     #   pandas
     #   typepy
@@ -5487,12 +5521,12 @@ python-dotenv==1.2.2 \
 python-json-logger==4.1.0 \
     --hash=sha256:132994765cf75bf44554be9aa49b06ef2345d23661a96720262716438141b6b2 \
     --hash=sha256:b396b9e3ed782b09ff9d6e4f1683d46c83ad0d35d2e407c09a9ebbf038f88195
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 python-multipart==0.0.32 \
     --hash=sha256:be54b7f3fa167bb83e4fcd936b887b708f4e57fe75911c02aebf53efaf8d938e \
     --hash=sha256:ff6d3f776f16878c894e52e107296ffc890e913c611b1a4ec6c44e2821fe2e23
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   fastapi
     #   mcp
 python-rapidjson==1.23 \
@@ -5776,7 +5810,7 @@ pyyaml==6.0.3 \
     --hash=sha256:fa160448684b4e94d80416c0fa4aac48967a969efe22931448d853ada8baf926 \
     --hash=sha256:fc09d0aa354569bc501d4e787133afc08552722d3ab34836a80547331bb5d4a0
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   albumentations
     #   datamodel-code-generator
@@ -5886,10 +5920,7 @@ pyzmq==27.1.0 \
     --hash=sha256:f605d884e7c8be8fe1aa94e0a783bf3f591b84c24e4bc4f3e7564c82ac25e271 \
     --hash=sha256:fbb4f2400bfda24f12f009cba62ad5734148569ff4949b1b6ec3b519444342e6 \
     --hash=sha256:ff8d114d14ac671d88c89b9224c63d6c4e5a613fe8acd5594ce53d752a3aafe9
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   jupyter-client
+    # via -r ../common.txt
 rapidfuzz==3.12.1 \
     --hash=sha256:00ceb8ff3c44ab0d6014106c71709c85dee9feedd6890eff77c814aa3798952b \
     --hash=sha256:018506a53c3b20dcbda8c93d4484b9eb1764c93d5ea16be103cf6b0d8b11d860 \
@@ -5980,9 +6011,9 @@ rapidfuzz==3.12.1 \
     --hash=sha256:fbe7580b5fb2db8ebd53819171ff671124237a55ada3f64d20fc9a149d133960 \
     --hash=sha256:fd37e53f0ed239d0cec27b250cec958982a8ba252ce64aa5e6052de3a82fa8db
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   jiwer
-ray==2.56.1 \
+ray[default]==2.56.1 \
     --hash=sha256:44bc0000c5bfad85b2ff6e0ef91e95f901d1a2d2fdd72f94f08a046eb494cd61 \
     --hash=sha256:49aa1f8aa1799a6b63adc8e4edd600b949b2bb648461abedcbcccd56c8ef0f82 \
     --hash=sha256:4df45f33cc176b11c69191efdcfb4aceaeea22fecfa784f6485b6504ef8c8b26 \
@@ -6001,7 +6032,7 @@ ray==2.56.1 \
     --hash=sha256:e5d3173696831134c76bd09451dfe95c32d72c271253b0d6b09d2df9994aa660 \
     --hash=sha256:e7003a47a42ef2ad33ec0b34dc5b6afb03f63fe59465e6f4c8f6d05492d9e4a6 \
     --hash=sha256:ea372c7f95b14f1f76f0bdd2abc9602c56e88bc30699d2228f78133e7749b2f1
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 redis==7.3.0 \
     --hash=sha256:4d1b768aafcf41b01022410b3cc4f15a07d9b3d6fe0c66fc967da2c88e551034 \
     --hash=sha256:9d4fcb002a12a5e3c3fbe005d59c48a2cc231f87fbb2f6b70c2d89bb64fec364
@@ -6128,7 +6159,7 @@ regex==2026.2.28 \
     --hash=sha256:fd0ce43e71d825b7c0661f9c54d4d74bd97c56c3fd102a8985bcfea48236bacb \
     --hash=sha256:fd63453f10d29097cc3dc62d070746523973fb5aa1c66d25f8558bebd47fed61
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   nltk
     #   open-clip-torch
     #   sacrebleu
@@ -6138,17 +6169,14 @@ requests==2.34.2 \
     --hash=sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0 \
     --hash=sha256:f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   azure-core
     #   buildkite-test-collector
     #   cohere
     #   datasets
-    #   docker
     #   evaluate
     #   google-api-core
     #   google-cloud-storage
-    #   gpt-oss
     #   lm-eval
     #   mistral-common
     #   msal
@@ -6458,12 +6486,10 @@ rpds-py==0.30.0 \
     # via
     #   jsonschema
     #   referencing
-runai-model-streamer==0.17.1 \
+runai-model-streamer[azure,gcs,s3]==0.17.1 \
     --hash=sha256:2dd7b4dd5bc6b0c0dd2cfc875a32af40a5dd408db8026374e93ca34f8039321f \
     --hash=sha256:3ffc2fb0edc4738e9bddf8c8606e70aa8bc28b3d1b8f2caf57f494c676735a63
-    # via
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/rocm.in
+    # via -r rocm.in
 runai-model-streamer-azure==0.17.1 \
     --hash=sha256:1a6a530c621aba4c967cc811b6a8d6a99b2f738e3b015d7a0e23ca0dcb850188 \
     --hash=sha256:f436a7ab08efdf5f0127edc14b0abb4f2934ba810181cae770dbcdd5270c734f
@@ -6503,8 +6529,7 @@ safetensors==0.8.0 \
     --hash=sha256:fcdd41ec4628fee5799f807c73c353629130fbd942aa23d83c623dd6c9d52d78 \
     --hash=sha256:fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   open-clip-torch
     #   peft
@@ -6514,7 +6539,7 @@ safetensors==0.8.0 \
 schemathesis==4.21.6 \
     --hash=sha256:0c21142c91e7b189a0b89ad8a5152b4b3071b707463d4f454f2a1ad1c0505bae \
     --hash=sha256:82c1716048b510e4064d6308fa341c8e5165a5f90390c5729f99cc923283ab0e
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 scikit-image==0.26.0 \
     --hash=sha256:0608aa4a9ec39e0843de10d60edb2785a30c1c47819b67866dd223ebd149acaf \
     --hash=sha256:0660b83968c15293fd9135e8d860053ee19500d52bf55ca4fb09de595a1af650 \
@@ -6687,12 +6712,12 @@ scipy==1.17.1 \
 segmentation-models-pytorch==0.5.0 \
     --hash=sha256:c34e09047771aa4dd8878b4f899e8125700cd1f8f7db16e58c37204154151a05 \
     --hash=sha256:cabba8aced6ef7bdcd6288dd9e1dc2840848aa819d539c455bd07aeceb2fdf96
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 sentence-transformers==5.6.0 \
     --hash=sha256:0e7164d051e416c1853ade7c274ff52af3f9da0f4be7f0b83d734c27699e1057 \
     --hash=sha256:d2075b5e687a1611005e20ab04a6846994d51adfcf39610aed066af3c0c0b81f
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   mteb
 sentencepiece==0.2.1 \
     --hash=sha256:010f025a544ef770bb395091d57cb94deb9652d8972e0d09f71d85d5a0816c8c \
@@ -6760,7 +6785,7 @@ sentencepiece==0.2.1 \
     --hash=sha256:e10fa50bdbaa5e2445dbd387979980d391760faf0ec99a09bd7780ff37eaec44 \
     --hash=sha256:e37e4b4c4a11662b5db521def4e44d4d30ae69a1743241412a93ae40fdcab4bb \
     --hash=sha256:e52144670738b4b477fade6c2a9b6af71a8d0094514c9853ac9f6fc1fcfabae7
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 sentry-sdk==2.55.0 \
     --hash=sha256:3774c4d8820720ca4101548131b9c162f4c9426eb7f4d24aca453012a7470f69 \
     --hash=sha256:97026981cb15699394474a196b88503a393cbc58d182ece0d3abe12b9bd978d4
@@ -6863,17 +6888,7 @@ setproctitle==1.3.7 \
     --hash=sha256:fcb966a6c57cf07cc9448321a08f3be6b11b7635be502669bc1d8745115d7e7f \
     --hash=sha256:fe5ca35aeec6dc50cabab9bf2d12fbc9067eede7ff4fe92b8f5b99d92e21263f \
     --hash=sha256:ff3c1c32382fb71a200db8bab3df22f32e6ac7ec3170e92fa5b542cf42eed9a2
-    # via -r requirements/test/../common.txt
-setuptools==79.0.1 \
-    --hash=sha256:128ce7b8f33c3079fd1b067ecbb4051a66e8526e7b65f6cec075dfc650ddfa88 \
-    --hash=sha256:e147c0549f27767ba362f9da434eab9c5dc0045d5304feb602a0af001089fc51
-    # via
-    #   -c requirements/common.txt
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/../common.txt
-    #   model-hosting-container-standards
-    #   pytablewriter
-    #   torch
+    # via -r ../common.txt
 shellingham==1.5.4 \
     --hash=sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686 \
     --hash=sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de
@@ -6996,8 +7011,6 @@ six==1.17.0 \
     --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274 \
     --hash=sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
     #   junit-xml
     #   opencensus
     #   python-dateutil
@@ -7027,7 +7040,7 @@ soundfile==0.13.1 \
     --hash=sha256:b2c68dab1e30297317080a5b43df57e302584c49e2942defdde0acccc53f0e5b \
     --hash=sha256:c734564fab7c5ddf8e9be5bf70bab68042cd17e9c214c06e365e20d64f9a69d5
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   genai-perf
     #   librosa
     #   mistral-common
@@ -7134,8 +7147,7 @@ starlette==1.3.1 \
     --hash=sha256:05d0213193f2fbaae60e2ecb593b4add4262ad4e46536b54abe36f11a71724e0 \
     --hash=sha256:c7372aae11c3c3f26a42df7bd626cec2f47d03483d261d369516a615a53714c6
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   fastapi
     #   mcp
     #   model-hosting-container-standards
@@ -7184,10 +7196,6 @@ statsmodels==0.14.6 \
     --hash=sha256:f4ff0649a2df674c7ffb6fa1a06bffdb82a6adf09a48e90e000a15a6aaa734b0 \
     --hash=sha256:fe76140ae7adc5ff0e60a3f0d56f4fffef484efa803c3efebf2fcd734d72ecb5
     # via genai-perf
-structlog==26.1.0 \
-    --hash=sha256:e081a26d6c373e6d201eca24eede26d8ffab07f88f477822e679183428d3d91e \
-    --hash=sha256:f63a716cbd1b1291cf7661de7794b455acfa4c43c5bcf1630e6ad5ddc1adb3b7
-    # via gpt-oss
 supervisor==4.3.0 \
     --hash=sha256:0bcb763fddafba410f35cbde226aa7f8514b9fb82eb05a0c85f6588d1c13f8db \
     --hash=sha256:4a2bf149adf42997e1bb44b70c43b613275ec9852c3edacca86a9166b27e945e
@@ -7209,7 +7217,7 @@ tabulate==0.10.0 \
 tblib==3.1.0 \
     --hash=sha256:06404c2c9f07f66fee2d7d6ad43accc46f9c3361714d9b8426e7f47e595cd652 \
     --hash=sha256:670bb4582578134b3d81a84afa1b016128b429f3d48e6cbbaecc9d15675e984e
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 tcolorpy==0.1.7 \
     --hash=sha256:0fbf6bf238890bbc2e32662aa25736769a29bf6d880328f310c910a327632614 \
     --hash=sha256:26a59d52027e175a37e0aba72efc99dda43f074db71f55b316d3de37d3251378
@@ -7218,19 +7226,12 @@ tenacity==9.1.4 \
     --hash=sha256:6095a360c919085f28c6527de529e76a06ad89b23659fa881ae0649b867a9d55 \
     --hash=sha256:adb31d4c263f2bd041081ab33b498309a57c77f9acf2db65aadf0898179cf93a
     # via
-    #   gpt-oss
     #   lm-eval
     #   schemathesis
 tensorizer==2.10.1 \
     --hash=sha256:079a4aa1db03fb6fe4e6949a78cd5f6b0070e074421da4b34216db58973dce65 \
     --hash=sha256:fe39940548a287c84891ee9dd966d6e87575312625ba46c9eda11b0b79d05028
-    # via
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/rocm.in
-termcolor==3.3.0 \
-    --hash=sha256:348871ca648ec6a9a983a13ab626c0acce02f515b9e1983332b17af7979521c5 \
-    --hash=sha256:cf642efadaf0a8ebbbf4bc7a31cec2f9b5f21a9f726f4ccbb08192c9c26f43a5
-    # via gpt-oss
+    # via -r rocm.in
 threadpoolctl==3.6.0 \
     --hash=sha256:43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb \
     --hash=sha256:8ab8b4aa3491d812b623328249fab5302a68d2d71745c8a4c719a2fcaba9f44e
@@ -7298,9 +7299,7 @@ tiktoken==0.12.0 \
     --hash=sha256:fc530a28591a2d74bce821d10b418b26a094bf33839e69042a6e86ddb7a7fb27 \
     --hash=sha256:ffc5288f34a8bc02e1ea7047b8d041104791d2ddbf42d1e5fa07822cbffe16bd
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   gpt-oss
+    #   -r ../common.txt
     #   lm-eval
     #   mistral-common
 tilelang==0.1.10 \
@@ -7309,15 +7308,12 @@ tilelang==0.1.10 \
     --hash=sha256:85180d1a96defeecdf52d5d075a31c3fc551d8485981e6b636762a9cd7eb02fe \
     --hash=sha256:93dd078113d275352698a6e72a91e80e5b0263d22a005109b3db2c1c016ea105 \
     --hash=sha256:d8813e668fcf75843bc2d68c633c352b419c1e292895a6038a4aadd943e56c2b
-    # via
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/rocm.in
+    # via -r rocm.in
 timm==1.0.30 \
     --hash=sha256:1444a3af7e17fdba5440ac2bcf6e4b728da96dd62289ed9e1bcba31a545f5935 \
     --hash=sha256:c8e27adf6801a2fdfb570dbbdd171f2f084756eefc673df8cfaab06bd14864f3
     # via
-    #   -c requirements/rocm.txt
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   open-clip-torch
     #   segmentation-models-pytorch
 tokenizers==0.23.3 \
@@ -7346,10 +7342,59 @@ tokenizers==0.23.3 \
     --hash=sha256:ec82e80e65a862275b97c3d90b7a523df8d9519ee48aeb4e9625b2cc909274e0 \
     --hash=sha256:efa3d7318406b4d115dce61ad5061953f1f44b128e79c020ce4615d763e23b6e
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   cohere
     #   transformers
+torch==2.15.0 \
+    --hash=sha256:02ac0b22211c1984e5dc002d2e57fdbc13d32116537ea6ae1a0c9d07cafce0c9 \
+    --hash=sha256:04597a77bbcc7a1a01e7b9efce78d258b18a7f31bcb190f4ee00360bff75e7f6 \
+    --hash=sha256:06a686eb717cd3d1662363082820be45497318887c596d691af0af0c7649c8f0 \
+    --hash=sha256:0d2b2d9674fa0b9b3f50e83231aa6545a0b19e437a52f0af939a224faaa45515 \
+    --hash=sha256:1412c79b0338ea61fa31e74a59d74e412c56307e226d3c6e61ccd6d4613ffc3f \
+    --hash=sha256:2167ed5782ab62f41fb766b822ebea638c2ffcb72e8c3abdd3efc429bbe60a19 \
+    --hash=sha256:241fea2bac4ed8351307cd13eca5020fbe231f990891be299cf683897caebfbc \
+    --hash=sha256:48c2d861134c0b5697c7602cb5ffa68f62a2989fdcd1717e593356f67996ca1e \
+    --hash=sha256:4a906d0fa6dc9aa9a9b5f3b96437c8dfe661f855645b3f838c12fc5cf5cce562 \
+    --hash=sha256:58ce2ebfb3430941353109a85be63ee8e941da22f13daa2c43344eeb51c81e06 \
+    --hash=sha256:593e5fd0c204284890d1c3dff643be34e549e1d24523e13402510f960d4da438 \
+    --hash=sha256:59c3a521000ab76a11785276b3d56752e03ca2751658798a94c8f1032f93cf41 \
+    --hash=sha256:628f54cb55a2363a5f14471a80c1b6efb63724449d2611ad2772fb5d4c42d19d \
+    --hash=sha256:6d8c86f4e33a9f12a58149bd9b0d64351632b8eb44479be8ff85e5389932dd79 \
+    --hash=sha256:9024cbf347dce95759bcde1411ef59b7cdb9ef0a846f4f24f356a17f8cf16f7d \
+    --hash=sha256:9e51cf9460c5441dcd2a4f31ece207e35ea7c3d2535be0f929cca4944e2eeb18 \
+    --hash=sha256:a46cf67c6b574311ecdc24364a5c3a694c60dd3619043f594cfebb8f0b283ea4 \
+    --hash=sha256:c521a00891e92aba2f34717671c268acd0bde26444623efcceaeaf51c87b3b36 \
+    --hash=sha256:cf02d11e13819807389e172ecb8f400f6135969af860e2a9f677f67a011e6194 \
+    --hash=sha256:d0862b725d86a2795ff331f519fd332451ff75f2e7cff561673d61c44cef7155 \
+    --hash=sha256:d2c5938f593a47cf6d151a16d130a3cc3f0c105df1b905a571efc00b01e38c1f \
+    --hash=sha256:e079089d36401261ebe145504309d0114fb9a00529eac4b33048221d2376a15c \
+    --hash=sha256:e808b63d616a43b326e1a5677d45a2e5babe7a8ce27edb03ddb48e7dd9b6d663 \
+    --hash=sha256:eba5772cdce0f92a81d0f5c577ac571a4ee35e052ba7533c2d6dd860f0c5659f \
+    --hash=sha256:ed708117f2f0162dbbd958dbd2654c16c99ad4c8ac14ccc4617dc76f029b8a8d \
+    --hash=sha256:f2bd0a3709a7493a6ef2ac5a654111242a854439f7558f910b6b653b56f7504d \
+    --hash=sha256:fbefd73b521d3c75c5a1d7c77056b2c6339b81468d14d4e33c55f525418a5855 \
+    --hash=sha256:fbf74b432a5c1cac0824af3d482ecc64a0a8187a3d58cc6733efe349697daac4
+    # via
+    #   accelerate
+    #   bitsandbytes
+    #   compressed-tensors
+    #   encodec
+    #   instanttensor
+    #   mteb
+    #   open-clip-torch
+    #   peft
+    #   runai-model-streamer
+    #   segmentation-models-pytorch
+    #   sentence-transformers
+    #   tensorizer
+    #   tilelang
+    #   timm
+    #   torch-c-dlpack-ext
+    #   torchaudio
+    #   torchvision
+    #   vector-quantize-pytorch
+    #   vocos
+    #   xgrammar
 torch-c-dlpack-ext==0.1.5 \
     --hash=sha256:30e3eab616dbc81dfdb7492aca557be551a9163ba9b585f97394a42b336b113a \
     --hash=sha256:3448c4f0d64104d0b2e58080a7efa72304a04960c18f338024b80b13cd3eca26 \
@@ -7377,26 +7422,30 @@ torch-c-dlpack-ext==0.1.5 \
     --hash=sha256:e6f9da4bb9af70e27facc777458be62e10dbbbddda7672d16138db0553c5a524 \
     --hash=sha256:fba674110e1fab0b176bb5a28223e157db65c90767d4ba74abdbee9f537b0e9d
     # via tilelang
-tornado==6.5.10 \
-    --hash=sha256:302eb1e0e3e159314eb591920529fdea80acca92df5510a2cec5bbd4f099ec72 \
-    --hash=sha256:37ae8f150cecfdbf747fc4e12f5e9a97ecd8cf1d4cdb3f119e2de84b11196918 \
-    --hash=sha256:4bd192b959f9128fb99b8898148070ba4574c9589b78bce42d1851131fe85828 \
-    --hash=sha256:66aaa3f57d30c6e6becee83ff28055d5930ac724214bde99393eefda83d5e015 \
-    --hash=sha256:69acca6501eed74582b76dbbceee2a91613f54728e3e418346000d7103101676 \
-    --hash=sha256:83e6cf438b106c6b3852d70960967bb1b70c87438050dca0981e4b9aa751a4c1 \
-    --hash=sha256:9261783640e23258694a9ff0795df430a5a7b0a651d3dd53dd0969ad6be16da7 \
-    --hash=sha256:a6b1ccd08c04b4a06fb5aeb381be99de5ad1e5375c1785e31d78c880feb57687 \
-    --hash=sha256:bdf942448169e5336451d0494d7e3d81cfa726d5aa312affdc4682dd62a62f6d \
-    --hash=sha256:ce045d3c298fddd30e89a2777f97039d1b641eb9518ac7b26a4721903539c694
-    # via jupyter-client
+torchaudio==2.11.1 \
+    --hash=sha256:0173b5b51e1368aa88de3cbe4e98508b5e9df4d8d59356c4e1fbc830c96191ef \
+    --hash=sha256:46ea71634d181f797370f046075ea982043c228b38d674fd7d9fc1c855a37b6a \
+    --hash=sha256:917667ab3e357d286b0e2405a33dc538e4344d554b72e1b2b03382a4352ca857 \
+    --hash=sha256:ad1175202b5cdb7585a38c1330845430e128c4ed8ceb770639318aa40fc1994b
+    # via
+    #   encodec
+    #   vocos
+torchvision==0.29.2 \
+    --hash=sha256:0875f7a23bd298813240f716c56df44ce72ddb45146589442a38edd0e1f59637 \
+    --hash=sha256:5812c312d4401c3587a045fa4c6228d982ebc4faa9b472275d11afe5852e24f9 \
+    --hash=sha256:a47f8f586df22d9e8e436854f9f613448e36788af8fb2e0eba91516034df2189 \
+    --hash=sha256:d412494ff011f24c884a3cffd33eba1cb45a0299d4e26c1e175113f9d3b3ebc7
+    # via
+    #   open-clip-torch
+    #   segmentation-models-pytorch
+    #   timm
 tqdm==4.67.3 \
     --hash=sha256:7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb \
     --hash=sha256:ee1e4c0e59148062281c49d80b25b67771a127c85fc9676d3be5f243206826bf
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   datasets
     #   evaluate
-    #   gpt-oss
     #   huggingface-hub
     #   lm-eval
     #   mteb
@@ -7410,19 +7459,12 @@ tqdm==4.67.3 \
     #   sentence-transformers
     #   tilelang
     #   transformers
-traitlets==5.16.1 \
-    --hash=sha256:ed900c2b631aa3a112811139fa97b8d2c3bad5e989656bba4b7e52c7852c18c1 \
-    --hash=sha256:f775618166caa0396c8e337099240f2bd3e5e917d203b2e6fbe21a58d3cb1f6b
-    # via
-    #   jupyter-client
-    #   jupyter-core
 transformers==5.22.0 \
     --hash=sha256:3cca65f94b0aa33511433c7c1a661c513e4ad8bc0504cb370d181d771e7c9aa0 \
     --hash=sha256:f2864f282383820089b21d104d55cb72118b8594f053c2cbeb58d0740f9ff662
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   -r requirements/test/rocm.in
+    #   -r ../common.txt
+    #   -r rocm.in
     #   compressed-tensors
     #   genai-perf
     #   peft
@@ -7431,12 +7473,24 @@ transformers==5.22.0 \
     #   xgrammar
 transformers-stream-generator==0.0.5 \
     --hash=sha256:271deace0abf9c0f83b36db472c8ba61fdc7b04d1bf89d845644acac2795ed57
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
+triton==3.9.0 \
+    --hash=sha256:1622118a038b0c6e16fa4a0305da62c8b3c15904ee1cc4d4e65846a25969e41e \
+    --hash=sha256:5542f4328472fd827dbb1ec43873364c2894682cc3f5d1c74a643762900e243e \
+    --hash=sha256:5e52ab4e2f1d64f0ac494c9aa723697b793f81a91c4cae4c36608ca0bc4267bf \
+    --hash=sha256:8d0b97b333d919e86d06a6b3c8656c27eecaf14f74c1eb64d210234603268ba2 \
+    --hash=sha256:990d43d967bbcc90f973fc17ad9cd7352e67940f41b31d94afd53b9867a3c1a1 \
+    --hash=sha256:bac2ed42a2b7aa232aeec57c2f7b0d88b61a74a29b3bf358f4cec6b20be356f6 \
+    --hash=sha256:eab30be40d412e947f3b74b20f50e4f8e07dd11439e7ddc6bd6184cabda2be79 \
+    --hash=sha256:feaaec13578ca84301d561d034cb08b3ae293d7f0b7ab6b8ddbb2d6796363716
+    # via
+    #   torch
+    #   xgrammar
 tritonclient==2.66.0 \
     --hash=sha256:7e3558a47542528a4edd2da607050e756022c6b14ea2b352a67c78f1484e698f \
     --hash=sha256:d2c2865239017a0d15a5f34e23f093feac222e608d6182a1444354204a0833ad \
     --hash=sha256:ec759cd8186130be9726be2fa31bc14b1dd46daa19add770610df889aa57d0a4
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 truststore==0.10.4 \
     --hash=sha256:9d91bd436463ad5e4ee4aba766628dd6cd7010cf3e2461756b3303710eebc301 \
     --hash=sha256:adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981
@@ -7447,7 +7501,7 @@ typeguard==4.5.1 \
     --hash=sha256:44d2bf329d49a244110a090b55f5f91aa82d9a9834ebfd30bcc73651e4a8cc40 \
     --hash=sha256:f6f8ecbbc819c9bc749983cc67c02391e16a9b43b8b27f15dc70ed7c4a007274
     # via inflect
-typepy==1.3.4 \
+typepy[datetime]==1.3.4 \
     --hash=sha256:89c1f66de6c6133209c43a94d23431d320ba03ef5db18f241091ea594035d9de \
     --hash=sha256:d5ed3e0c7f49521bff0603dd08cf8d453371cf68d65a29d3d0038552ccc46e2e
     # via
@@ -7471,8 +7525,7 @@ typing-extensions==4.16.0 \
     --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8 \
     --hash=sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   aiohttp
     #   aiosignal
     #   albumentations
@@ -7483,14 +7536,13 @@ typing-extensions==4.16.0 \
     #   azure-core
     #   azure-identity
     #   azure-storage-blob
-    #   chz
+    #   blake3
     #   cohere
     #   datamodel-code-generator
     #   fastapi
     #   grpcio
     #   httpx2
     #   huggingface-hub
-    #   jupyter-client
     #   librosa
     #   lm-eval
     #   mcp
@@ -7530,23 +7582,21 @@ urllib3==2.8.0 \
     --hash=sha256:0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3 \
     --hash=sha256:63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   blobfile
     #   botocore
-    #   docker
     #   requests
     #   responses
     #   sentry-sdk
     #   tritonclient
     #   types-requests
-uvicorn==0.42.0 \
+uvicorn[standard]==0.42.0 \
     --hash=sha256:96c30f5c7abe6f74ae8900a70e92b85ad6613b745d4879eb9b16ccad15645359 \
     --hash=sha256:9b1f190ce15a2dd22e7758651d9b6d12df09a13d51ba5bf4fc33c383a48e1775
     # via
     #   fastapi
     #   fastapi-cli
     #   fastapi-cloud-cli
-    #   gpt-oss
     #   mcp
 uvloop==0.22.1 \
     --hash=sha256:017bd46f9e7b78e81606329d07141d3da446f8798c6baeec124260e22c262772 \
@@ -7602,17 +7652,17 @@ uvloop==0.22.1 \
 vector-quantize-pytorch==1.28.0 \
     --hash=sha256:c182d4400f4c65f97349efb3c2547850b5f9304032ed13c575be207a89354f7e \
     --hash=sha256:f04fcfcecffa9a250a4663474a799cfc7a7901d87899e519ea80814d94425046
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 virtualenv==21.14.12 \
     --hash=sha256:7820aeaef23f1f59a96458edfc7f9d3deac937155718de15f1c9a64471e15551 \
     --hash=sha256:bbcfb78e36c22ad70c6917c4aecb5e63477d3c138e9f88c946f320e31859c76a
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   ray
 vocos==0.1.0 \
     --hash=sha256:0ac13eaef68596074301e912d781399b3defa4b4ca60b6bc52c8a4b9209ca235 \
     --hash=sha256:b488224dbe398ff7d4790a027ad659478b4bc02e465db992c62c12b32ca043d8
-    # via -r requirements/test/rocm.in
+    # via -r rocm.in
 watchfiles==1.1.1 \
     --hash=sha256:00485f441d183717038ed2e887a7c868154f216877653121068107b227a2f64c \
     --hash=sha256:03fa0f5237118a0c5e496185cafa92878568b652a2e9a9382a5151b1a0380a43 \
@@ -7724,7 +7774,7 @@ watchfiles==1.1.1 \
     --hash=sha256:f8979280bdafff686ba5e4d8f97840f929a87ed9cdf133cbbd42f7766774d2aa \
     --hash=sha256:f9a2ae5c91cecc9edd47e041a930490c31c3afb1f5e6d71de3dc671bfaca02bf
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   uvicorn
 wcwidth==0.6.0 \
     --hash=sha256:1a3a1e510b553315f8e146c54764f4fb6264ffad731b3d78088cdb1478ffbdad \
@@ -7797,7 +7847,7 @@ werkzeug==3.1.9 \
     --hash=sha256:55ca7c70a75689be937aa27f8ff4b018f06ff4838fc73045560bf0f5a1291060 \
     --hash=sha256:6392e50c78460ba618e5b21f08a71f59c99ce99cdc6cf6e3dd7e6ccca8754fab
     # via
-    #   -r requirements/test/rocm.in
+    #   -r rocm.in
     #   schemathesis
 word2number==1.1 \
     --hash=sha256:70e27a5d387f67b04c71fbb7621c05930b19bfd26efd6851e6e0f9969dcde7d0
@@ -7894,7 +7944,7 @@ wrapt==2.1.2 \
     --hash=sha256:ff2aad9c4cda28a8f0653fc2d487596458c2a3f475e56ba02909e950a9efa6a9 \
     --hash=sha256:ff95d4264e55839be37bafe1536db2ab2de19da6b65f9244f01f332b5286cfbf
     # via smart-open
-xgrammar==0.2.8 \
+xgrammar==0.2.8 ; platform_machine == "x86_64" or platform_machine == "aarch64" or platform_machine == "arm64" or platform_machine == "s390x" or platform_machine == "ppc64le" \
     --hash=sha256:08c80f20e18402397c11af6cee3c965da41f5116fa033115297bcbdaa877e07a \
     --hash=sha256:0c6125fa3dc27b46adde83329571c1dac2ab2474779daee207428ce2e9c6e9b5 \
     --hash=sha256:155091c54e3cd5cde6c29e69339a74e5c95da83bb0294acd2abb9a70f85f674e \
@@ -7937,9 +7987,7 @@ xgrammar==0.2.8 \
     --hash=sha256:f56156ca0abdaf089c3f87fcfa7bafeab47df3374f221b67b2e4b4be8c819125 \
     --hash=sha256:f5a0c18908fd0433f03602bedac21c746ac41ac5a28927f927456ac740ae8b8f \
     --hash=sha256:ffb6f7cd6e5393ef09d1a4395833e0dfbe359c07c48c2cfb028a9645702079c3
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 xxhash==3.6.0 \
     --hash=sha256:01262da8798422d0685f7cef03b2bd3f4f46511b02830861df548d7def4402ad \
     --hash=sha256:01362c4331775398e7bb34e3ab403bc9ee9f7c497bc7dee6272114055277dd3c \
@@ -8237,27 +8285,3 @@ zipp==3.23.0 \
     --hash=sha256:071652d6115ed432f5ce1d34c336c0adfd6a884660d1e9712a256d3d3bd4b14e \
     --hash=sha256:a07157588a12518c9d4034df3fbbee09c814741a33ff63c05fa29d26a2404166
     # via importlib-metadata
-
-# The following packages were excluded from the output:
-# torch
-# torchvision
-# torchaudio
-# triton
-# cuda-bindings
-# cuda-pathfinder
-# cuda-toolkit
-# nvidia-cublas
-# nvidia-cuda-cccl
-# nvidia-cuda-cupti
-# nvidia-cuda-nvrtc
-# nvidia-cuda-runtime
-# nvidia-cufft
-# nvidia-cufile
-# nvidia-cusolver
-# nvidia-cusparse
-# nvidia-nvjitlink
-# nvidia-nvtx
-# nvidia-cudnn-cu13
-# nvidia-cusparselt-cu13
-# nvidia-nccl-cu13
-# nvidia-nvshmem-cu13

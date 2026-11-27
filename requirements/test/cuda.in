@@ -87,7 +87,7 @@ plotly # required for perf comparison html report
 urllib3>=2.8.0
 cryptography>=50.0.0
 pyjwt>=2.14.0
-pyasn1>=0.6.4
+pyasn1>=0.6.5
 python-multipart>=0.0.31
 anyio>=4.14.2
 httpx2>=2.12.0

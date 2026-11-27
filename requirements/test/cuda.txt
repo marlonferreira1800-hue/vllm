@@ -179,12 +179,10 @@ aiohttp==3.14.5 \
     --hash=sha256:fce9523df31cea6284f3e2c479876750d7687cf671d7b25d32b19effc0e86441 \
     --hash=sha256:ff75a7537413a86e7cafe98e0e1d6e3dc4b15c6349896e7d5c6b881bfdb6d550
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   aiohttp-cors
     #   datasets
     #   fsspec
-    #   gpt-oss
     #   lm-eval
     #   ray
 aiohttp-cors==0.8.1 \
@@ -198,7 +196,7 @@ aiosignal==1.4.0 \
 albumentations==1.4.6 \
     --hash=sha256:8e8c007f1d0743f0965da08e4308626a2a5d60b2ea2a2d0bbd41ffa4f5b4822d \
     --hash=sha256:e77d2e82ca1d547b1288fa3f68da098cc8cc1a52a7cf8b138200e74b18f82a33
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 alembic==1.16.4 \
     --hash=sha256:b05e51e8e82efc1abd14ba2af6392897e145930c3e0a2faf2b0da2f7f7fd660d \
     --hash=sha256:efab6ada0dd0fae2c92060800e0bf5c1dc26af15a10e02fb4babff164b4725e2
@@ -216,14 +214,12 @@ annotated-types==0.7.0 \
 anthropic==0.112.0 \
     --hash=sha256:bcc6268612c716dbb77133dd60fc41d26016d1b81dee9a52314d210193638751 \
     --hash=sha256:e180cd91aa5b9b32e4007fe69892ab128d8a86b9f90825103b1903fbc977d0af
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 anyio==4.14.2 \
     --hash=sha256:9f505dda5ac9f0c8309b5e8bd445a8c2bf7246f3ce950121e45ea15bc41d1494 \
     --hash=sha256:cfa139f3ed1a23ee8f88a145ddb5ac7605b8bbfd8592baacd7ce3d8bb4313c7f
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   anthropic
     #   httpx
     #   httpx2
@@ -270,12 +266,10 @@ apache-tvm-ffi==0.1.11 \
     --hash=sha256:e7527775369a32964e083fed04a3a1ce4134e3e8719a64660ad976be2d0ee58e \
     --hash=sha256:f47435e41bf8a2018ef126fad41f18e0c8fe8be4d25fb3ed04b615278b7806d4 \
     --hash=sha256:fd587ecd8ee843bbec467762490c8347af3dfe997608f9841b48a98f5fffac7f
-    # via
-    #   -c requirements/cuda.txt
-    #   xgrammar
-arctic-inference==0.1.1 \
+    # via xgrammar
+arctic-inference==0.1.1 ; platform_machine == "x86_64" \
     --hash=sha256:36857e2fbe3ead34821a04be98dfab95086050c1e38199c8fdfe308234fdcf63
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 argcomplete==3.5.1 \
     --hash=sha256:1a1d148bdaa3e3b93454900163403df41448a248af01b6e849edc5ac08e6c363 \
     --hash=sha256:eb1ee355aa2557bd3d0145de7b06b2a45b0ce461e1e7813f5d066039ab4177b4
@@ -347,7 +341,7 @@ av==16.1.0 \
     --hash=sha256:ee0e8de2e124a9ef53c955fe2add6ee7c56cc8fd83318265549e44057db77142 \
     --hash=sha256:f42e1a68ec2aebd21f7eb6895be69efa6aa27eec1670536876399725bbda4b99 \
     --hash=sha256:f49243b1d27c91cd8c66fdba90a674e344eb8eb917264f36117bf2b6879118fd
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 azure-core==1.38.2 \
     --hash=sha256:074806c75cf239ea284a33a66827695ef7aeddac0b4e19dda266a93e4665ead9 \
     --hash=sha256:67562857cb979217e48dc60980243b61ea115b77326fa93d83b729e7ff0482e7
@@ -365,7 +359,7 @@ azure-storage-blob==12.28.0 \
 backoff==2.2.1 \
     --hash=sha256:03f829f5bb1923180821643f8753b0502c3b682293992485b0eef2807afa5cba \
     --hash=sha256:63579f9a0628e06278f7e47b7d7d5b6ce20dc65c5e96a6f3ca99a6adca0396e8
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 black==26.5.1 \
     --hash=sha256:0e48b87e03bf109288e55cfceadcfa15ff5470aca2851a851950ed2926f450d7 \
     --hash=sha256:1037d5ac7b7b310b2632ad867ec8d0e4c4819dcdb0b820f63135da746a24e418 \
@@ -395,7 +389,7 @@ black==26.5.1 \
     --hash=sha256:ecb3e624844c798144e9bd986954e0adc81d8911a1f30f375e1252fe26e8c294 \
     --hash=sha256:ed1a20af114c301a0269bf01163d51dbef72737fd65f850001e7cbe7f3c7abae
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   datamodel-code-generator
 blake3==1.0.9 \
     --hash=sha256:01e136de1078a9011c82beb4a1cb400644794068c0e80877415328bb46d93b47 \
@@ -503,13 +497,11 @@ blake3==1.0.9 \
     --hash=sha256:f65d77eb05331495485048f6804f53885b192b998acb7e6fe1487d941bf08435 \
     --hash=sha256:f9d8b6c6af52a8ff499debf5fd15d7395e0ed837ec2a80fd828b4c6b970de3ed \
     --hash=sha256:fe3c59f8a7b5460fd374b264559c5da7af0a33657a9eca95fff6d843f02cde9e
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 blobfile==3.0.0 \
     --hash=sha256:32ec777414de7bb2a76ca812a838f0d33327ca28ae844a253503cde625cdf2f1 \
     --hash=sha256:48ecc3307e622804bd8fe13bf6f40e6463c4439eba7a1f9ad49fd78aa63cc658
-    # via
-    #   -r requirements/test/cuda.in
-    #   gpt-oss
+    # via -r cuda.in
 bm25s==0.2.13 \
     --hash=sha256:2ac797226b43e260c58b99eaf374a77b39d8a00d0f6f7f965539703e8b9a1171 \
     --hash=sha256:b6f6e787fbdb7f0441c7d3c201d62a5581f4387e5ee2c0b14fa5bec4b432fe45
@@ -533,12 +525,12 @@ bounded-pool-executor==0.0.3 \
 buildkite-test-collector==0.1.9 \
     --hash=sha256:541d3dcbe8f6c69121ce2a12d61fbae0ae38243b666b380c8d48670a194e1ec5 \
     --hash=sha256:d6437cfff5f9208b9786fbe0f67103dce11b3e6482769dc5e9deac8f050d2488
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 cachetools==5.5.2 \
     --hash=sha256:1a661caa9175d26759571b2e19580f9d6393969e5dfca11fdb1f947a23e640d4 \
     --hash=sha256:d26a22bcc62eb95c3beabd9f1ee5e820d3d2704fe2967cbe350e20c8ffcd3f0a
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   google-auth
 cbor2==6.1.2 \
     --hash=sha256:03440b505882280023db1fedcee6844804e9968bb50f9eb4ff12aaf27777fcfe \
@@ -590,13 +582,12 @@ cbor2==6.1.2 \
     --hash=sha256:f93179b4b1ba958b5c37b56969b8f07b4fcf44a83319f47559c59f28a1c564a4 \
     --hash=sha256:fe007e47f6edb828cc97af256ce3452f57431cb8841302c3c28543efc7c9e037 \
     --hash=sha256:ff7d0bd8ff432832338a8d2430aee34f8a082342480ff537c0ba90e2b8ff7894
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 certifi==2026.10.19 \
     --hash=sha256:035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae \
     --hash=sha256:42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   httpcore
     #   httpx
     #   requests
@@ -800,10 +791,6 @@ charset-normalizer==3.4.0 \
     --hash=sha256:fe9f97feb71aa9896b81973a7bbada8c49501dc73e58a10fcef6663af95e5079 \
     --hash=sha256:ffc519621dce0c767e96b9c53f09c5d215578e10b02c285809f76509a3931482
     # via requests
-chz==0.4.0 \
-    --hash=sha256:5380039e6970a1056c2140288aafa41a33f26d5e4c685117be80f7e260c8d679 \
-    --hash=sha256:5db5ffe42f6be38f1c37e1b18f0d5559572ee8a8dc941116e67f1bd5396e2a9b
-    # via gpt-oss
 click==8.4.2 \
     --hash=sha256:9a6cea6e60b17ebe0a44c5cc636d94f09bd66142c1cd7d8b4cd731c4917a15f6 \
     --hash=sha256:e6f9f66136c816745b9d65817da91d61d957fb16e02e4dcd0552553c5a197b76
@@ -819,11 +806,11 @@ click==8.4.2 \
 cloudpickle==3.1.2 \
     --hash=sha256:7fda9eb655c9c230dab534f1983763de5835249750e85fbcef43aaa30a9a2414 \
     --hash=sha256:9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 cohere==7.0.8 \
     --hash=sha256:5d9986b9b13cfe5590021474540648ff3c9e9ce4bfddc3d7f8e31acf1898c4d7 \
     --hash=sha256:a4fe9b9e148cb277ee152009d3566434b055db9d41fc7433abda78add22632ab
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 cohere-melody==0.14.0 \
     --hash=sha256:00a6093eab73a8844143ad5b4d28581c31162aaa854ec99a00f732c419b7bf97 \
     --hash=sha256:00bd30a48bbf2086855f3173de32e36d8098cd141b0d863f47f750c1e6d426a2 \
@@ -910,7 +897,7 @@ cohere-melody==0.14.0 \
     --hash=sha256:f55b2e75aeb01cea052f42ab7908a1efa7d001966d0f3c72c65456e1aa48b577 \
     --hash=sha256:f7b8d96ce4b39a4aa5bc496164b6d60cbda6f6b54d75b52f3dc0eb9a0d38229a \
     --hash=sha256:fa0740ac61b2be77b75cd15c670bd25f670e39e37be03323360bac5f2c3c300c
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 colorama==0.4.6 \
     --hash=sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44 \
     --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6
@@ -928,9 +915,7 @@ colorlog==6.10.1 \
 compressed-tensors==0.17.0 \
     --hash=sha256:15c20d06bdbcf35b51fc99fd125e7b9be1e1855567c33b7a46dfac26ad6fb126 \
     --hash=sha256:4a1b89b508f7efb8ffb4eee8a6e69e0452d9b080cae130146025c64fbe9fa9aa
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 contourpy==1.3.0 \
     --hash=sha256:00ccd0dbaad6d804ab259820fa7cb0b8036bda0686ef844d24125d8287178ce0 \
     --hash=sha256:0be4d8425bfa755e0fd76ee1e019636ccc7c29f77a7c86b4328a9eb6a26d0639 \
@@ -998,7 +983,7 @@ contourpy==1.3.0 \
     --hash=sha256:fd2a0fc506eccaaa7595b7e1418951f213cf8255be2600f1ea1b61e46a60c55f \
     --hash=sha256:fe41b41505a5a33aeaed2a613dccaeaa74e0e3ead6dd6fd3a118fb471644fd6c
     # via matplotlib
-coverage==7.10.6 \
+coverage[toml]==7.10.6 \
     --hash=sha256:073711de3181b2e204e4870ac83a7c4853115b42e9cd4d145f2231e12d670930 \
     --hash=sha256:081b98395ced0d9bcf60ada7661a0b75f36b78b9d7e39ea0790bb4ed8da14747 \
     --hash=sha256:0de434f4fbbe5af4fa7989521c655c8c779afb61c53ab561b64dcee6149e4c65 \
@@ -1228,7 +1213,7 @@ cryptography==50.0.1 \
     --hash=sha256:fd3718b960d0b5dd213cdf03f3bcb7000e69dda0de8b956061947ff6bcff5558 \
     --hash=sha256:ff838d62ec1bfce4f9ba7fa16f4a7b554cd8d0c299e6be37502161a660c84eef
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   azure-identity
     #   azure-storage-blob
     #   msal
@@ -1262,7 +1247,7 @@ cuda-bindings==13.0.3 \
 cuda-pathfinder==1.3.3 \
     --hash=sha256:9984b664e404f7c134954a771be8775dfd6180ea1e1aef4a5a37d4be05d9bbb1
     # via cuda-bindings
-cuda-toolkit==13.0.3.0 \
+cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3.0 \
     --hash=sha256:d693caaa261214ddd7dbb60d68e71cbed884e68c2be7509778f3051da0b91c3f
     # via torch
 cycler==0.12.1 \
@@ -1272,7 +1257,7 @@ cycler==0.12.1 \
 datamodel-code-generator==0.86.0 \
     --hash=sha256:1834ba0e84307dfed625eeacfbb07d790ede01a3adf5414a1c9947c5b9139078 \
     --hash=sha256:1a3d6f0a14a33e334b4251d04e67b0b6ef05c96d4625fb99bd09d716e30ea084
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 dataproperty==1.0.1 \
     --hash=sha256:0b8b07d4fb6453fcf975b53d35dea41f3cfd69c9d79b5010c3cf224ff0407a7a \
     --hash=sha256:723e5729fa6e885e127a771a983ee1e0e34bb141aca4ffe1f0bfa7cde34650a4
@@ -1283,7 +1268,7 @@ datasets==3.3.0 \
     --hash=sha256:22312d09626f8fc3aa0a237b0c164997f5903bddd4c4c9e27dbaf563754c681b \
     --hash=sha256:54c607b06f6eaa1572e21e200d2870d89d50e3bcc622dc2021a53a6ce4f684c2
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   evaluate
     #   lm-eval
     #   mteb
@@ -1291,13 +1276,13 @@ decorator==5.1.1 \
     --hash=sha256:637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330 \
     --hash=sha256:b8c3f85900b9dc423225913c5aace94729fe1fa9763b38939a95226f02d37186
     # via librosa
-decord==0.6.0 \
+decord==0.6.0 ; platform_machine == "x86_64" \
     --hash=sha256:02665d7c4f1193a330205a791bc128f7e108eb6ae5b67144437a02f700943bad \
     --hash=sha256:51997f20be8958e23b7c4061ba45d0efcd86bffd5fe81c695d0befee0d442976 \
     --hash=sha256:85ef90d2f872384657d7774cc486c237c5b12df62d4ac5cb5c8d6001fa611323 \
     --hash=sha256:9c20674964fb1490c677bd911d2023d2a09fec7a58a4bb0b7ddf1ccc269f107a \
     --hash=sha256:a0eb1258beade34dceb29d97856a7764d179db1b5182899b61874f3418a1abc8
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 defusedxml==0.7.1 \
     --hash=sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69 \
     --hash=sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61
@@ -1305,9 +1290,7 @@ defusedxml==0.7.1 \
 depyf==0.20.0 \
     --hash=sha256:d31effad4261cebecb58955d832e448ace88f432328f95f82fd99c30fd9308d4 \
     --hash=sha256:fb7683bd72c44f67b56029df2c47721e9a02ffa4d7b19095f1c54c4ebf797a98
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 detect-installer==0.1.0 \
     --hash=sha256:00ad7ba0a36e3cf7d08a40d3643011746dbc112597c7d475cc91c416710ca4e7 \
     --hash=sha256:034fb20fd665c36e6ba52b8821525ea07fb4f7f938cac459df889fb33801528a
@@ -1335,10 +1318,6 @@ dnspython==2.7.0 \
     --hash=sha256:b4c34b7d10b51bcc3a5071e7b8dee77939f1e878477eeecc965e9835f63c6c86 \
     --hash=sha256:ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1
     # via email-validator
-docker==7.2.0 \
-    --hash=sha256:a3f45fdeb9165e2d25d9a1d02ddf3bc70fb572cf5ebbf9b58558c22caf29b71f \
-    --hash=sha256:cebb93773d334f778e023a7ee352a8d6e13ab1bd3b863a4d4a59dec897df43ac
-    # via gpt-oss
 docopt==0.6.2 \
     --hash=sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491
     # via num2words
@@ -1350,7 +1329,7 @@ einops==0.8.1 \
     --hash=sha256:919387eb55330f5757c6bea9165c5ff5cfe63a642682ea788a6d472576d81737 \
     --hash=sha256:de5d960a7a761225532e0f1959e5315ebeafc0cd43394732f103ca44b9837e84
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   encodec
     #   vector-quantize-pytorch
     #   vocos
@@ -1375,15 +1354,13 @@ evaluate==0.4.3 \
     --hash=sha256:3a5700cf83aabee9549264e1e5666f116367c61dbd4d38352015e859a5e2098d \
     --hash=sha256:47d8770bdea76e2c2ed0d40189273027d1a41ccea861bcc7ba12d30ec5d1e517
     # via lm-eval
-fastapi==0.136.3 \
+fastapi[standard]==0.136.3 \
     --hash=sha256:3d2a69bdf04b7e9f3afa292c3bc7a98816bbfafa10bc9b45f3f3700d2f761620 \
     --hash=sha256:e487fae93ad408e6f47641ee4dfe389864fd7bec92e547ea8498fc13f43e83ab
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   gpt-oss
+    #   -r ../common.txt
     #   model-hosting-container-standards
-fastapi-cli==0.0.27 \
+fastapi-cli[standard]==0.0.27 \
     --hash=sha256:1dffb1e40c0c88f2e0171a8a252a2b615c1e63ff8c05626649e4badd6a84336a \
     --hash=sha256:2e389a40f318e29fec8cb1e289f267f17c048876fb82dbfa869a10b16740495d
     # via fastapi
@@ -1647,15 +1624,12 @@ fastsafetensors==0.3.3 \
     --hash=sha256:df2f641647b79093c5e3f4bb0b9c7d771f22b61279714c3059d5c71a7cf708da \
     --hash=sha256:e3386834e1595834124cfbb23e05a732cb1b4fb5f98562375c1806f14fe1d677 \
     --hash=sha256:f969b2c818942748ff1bc619e6d575a7a7156a7d488d4c41779fba8c4e1891dc
-    # via
-    #   -c requirements/cuda.txt
-    #   -r requirements/test/cuda.in
+    # via -r cuda.in
 filelock==4.0.7 \
     --hash=sha256:a93c4d93269b339a6af4848342c7e940d0f9928ad95eff64764699e5f1bf8a6a \
     --hash=sha256:da5915714a70b55d167fdc7e251ad91302b0a36816fb574dfafae8f4f2c9bb21
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   blobfile
     #   datasets
     #   huggingface-hub
@@ -1723,7 +1697,7 @@ fonttools==4.66.1 \
     --hash=sha256:f08ab7f8461c37ecfdd29ad97fb0c0780b50501bd664bb0f46b6e83ed2b9d2a7 \
     --hash=sha256:fdf4afd75c643e60ef4a96fe64fc8a9def27d2a542112332371a9e5066885f9a
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   matplotlib
 frozendict==2.4.6 \
     --hash=sha256:02331541611f3897f260900a1815b63389654951126e6e65545e529b63c08361 \
@@ -1862,7 +1836,7 @@ frozenlist==1.5.0 \
     # via
     #   aiohttp
     #   aiosignal
-fsspec==2024.12.0 \
+fsspec[http]==2024.12.0 \
     --hash=sha256:670700c977ed2fb51e0d9f9253177ed20cbde4a3e5c0283cc5385b5870c8533f \
     --hash=sha256:b520aed47ad9804237ff878b504267a3b0b441e97508bd6d2d8774e3db85cee2
     # via
@@ -1877,7 +1851,7 @@ ftfy==6.3.1 \
     # via open-clip-torch
 genai-perf==0.0.16 \
     --hash=sha256:352a949bf06f92a7a2232ede44d59b9386b82e150e10548a80e71bf0ccb08654
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 genson==1.3.0 \
     --hash=sha256:468feccd00274cc7e4c09e84b08704270ba8d95232aa280f65b986139cec67f7 \
     --hash=sha256:e02db9ac2e3fd29e65b5286f7135762e2cd8a986537c075b06fc5f1517308e37
@@ -1954,10 +1928,6 @@ googleapis-common-protos==1.70.0 \
     #   google-api-core
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
-gpt-oss==0.0.9 \
-    --hash=sha256:4bbd174a6af2060179ab292505ec8e0f2505188628a6d102bd72690d06387f9c \
-    --hash=sha256:f8cce0186e31752fb94ccbd61dcca5fd39603b6d22b9779656a7b20749a6330c
-    # via -r requirements/test/cuda.in
 graphql-core==3.2.6 \
     --hash=sha256:78b016718c161a6fb20a7d97bbf107f331cd1afe53e45566c59f776ed7f0b45f \
     --hash=sha256:c08eec22f9e40f0bd61d805907e3b3b1b9a320bc606e23dc145eebca07c8fbab
@@ -2081,14 +2051,14 @@ grpcio==1.78.0 \
     --hash=sha256:fd5f135b1bd58ab088930b3c613455796dfa0393626a6972663ccdda5b4ac6ce \
     --hash=sha256:ff870aebe9a93a85283837801d35cd5f8814fe2ad01e606861a7fb47c762a2b7
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   grpcio-reflection
     #   opentelemetry-exporter-otlp-proto-grpc
     #   ray
 grpcio-reflection==1.78.0 \
     --hash=sha256:06fcfde9e6888cdd12e9dd1cf6dc7c440c2e9acf420f696ccbe008672ed05b60 \
     --hash=sha256:e6e60c0b85dbcdf963b4d4d150c0f1d238ba891d805b575c52c0365d07fc0c40
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 h11==0.16.0 \
     --hash=sha256:4e35b956cf45792e4caa5885e69fba00bdbc6ffafbfa020300e549b208ee5ff1 \
     --hash=sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86
@@ -2100,7 +2070,7 @@ h2==4.4.1 \
     --hash=sha256:0e25f1462b23c9cb82d9eb02e28bc706dac2a68cb457c6a0d74d63c8a2a5d0e6 \
     --hash=sha256:4e866ffb1a869ae14dd9b5e6beb5c24a13da0495ad72b65925ded182521c1516
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   httpx
 harfile==0.5.0 \
     --hash=sha256:ab8a01d0d21d3b7f5ad57e7dc56b8b829f6a8855c1fa143aad464e7e8169f5e3 \
@@ -2225,12 +2195,8 @@ hpack==4.2.0 \
     --hash=sha256:0895cfa3b5531fc65fe439c05eb65144f123bf7a394fcaa56aa423548d8e45c0 \
     --hash=sha256:858ac0b02280fa582b5080d68db0899c62a80375e0e5413a74970c5e518b6986
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   h2
-html2text==2025.4.15 \
-    --hash=sha256:00569167ffdab3d7767a4cdf589b7f57e777a5ed28d12907d8c58769ec734acc \
-    --hash=sha256:948a645f8f0bc3abe7fd587019a2197a12436cd73d0d4908af95bfc8da337588
-    # via gpt-oss
 httpcore==1.0.9 \
     --hash=sha256:2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55 \
     --hash=sha256:6e34463af53fd2ab5d807f399a9b45ea31c3dfa2276f15a2c3f00afff6e176e8
@@ -2291,11 +2257,11 @@ httptools==0.8.0 \
     --hash=sha256:f256d6ce930c52ca1cb2a960b7da03548c454e7d28b06059ad41bfe789036ce0 \
     --hash=sha256:fe2a4c95aeba2209434e7b31172da572846cae8ca0bf1e7013e61b99fbbf5e72
     # via uvicorn
-httpx==0.27.2 \
+httpx[http2]==0.27.2 \
     --hash=sha256:7bb2708e112d8fdd7829cd4243970f0c223274051cb35ee80c03301ee29a3df0 \
     --hash=sha256:f7c2be1d2f3c3c3160d441802406b206c2b76f5947b11115e6df10c6c65e66c2
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   anthropic
     #   cohere
     #   fastapi
@@ -2308,15 +2274,14 @@ httpx2==2.12.0 \
     --hash=sha256:7631fe9887a8a2275f4a2540e053aa670fcc50742864a9ae7c66e609fdcf12cf \
     --hash=sha256:cc8b6eecb8661c146b8f89a60e97456ee086e91a784ed31ac450c3a9e613dd36
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   huggingface-hub
     #   mcp
 huggingface-hub==2.4.0 \
     --hash=sha256:13a6158b9e3393d9d3f248ce99074d50c2a0a1449fb9d8e2f710751e2084c188 \
     --hash=sha256:42ecfd93ede47bdd333daebbf66a32d7bfe2e18752754fe4d2d4f98a0179d801
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   datasets
     #   evaluate
@@ -2457,11 +2422,11 @@ ijson==3.5.0 \
     --hash=sha256:f7168a39e8211107666d71b25693fd1b2bac0b33735ef744114c403c6cac21e1 \
     --hash=sha256:f969ffb2b89c5cdf686652d7fb66252bc72126fa54d416317411497276056a18 \
     --hash=sha256:fdeee6957f92e0c114f65c55cf8fe7eabb80cfacab64eea6864060913173f66d
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 imagehash==4.3.2 \
     --hash=sha256:02b0f965f8c77cd813f61d7d39031ea27d4780e7ebcad56c6cd6a709acc06e5f \
     --hash=sha256:e54a79805afb82a34acde4746a16540503a9636fd1ffb31d8e099b29bbbf8156
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 imageio==2.37.0 \
     --hash=sha256:11efa15b87bc7871b61590326b2d635439acc321cf7f8ce996f812543ce10eed \
     --hash=sha256:71b57b3669666272c818497aebba2b4c5f20d5b37c81720e5e1a56d59c492996
@@ -2478,7 +2443,7 @@ iniconfig==2.0.0 \
     --hash=sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3 \
     --hash=sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374
     # via pytest
-instanttensor==0.2.2 \
+instanttensor==0.2.2 ; platform_machine == "x86_64" \
     --hash=sha256:0474ae1f12bccbd01fabaeffab483870d9be644dc5c52d8b746ee1806dbc02fe \
     --hash=sha256:0ccf832e544dcd13aac8da280ce70ad1b2bfede4fc00a7e7e3e6f963e3dd7eb4 \
     --hash=sha256:1ba19b3c7a9099a6e7ffe644e8bc808244ceb0b3dcefedda48243d90b89cc328 \
@@ -2490,9 +2455,7 @@ instanttensor==0.2.2 \
     --hash=sha256:aca07c1afe4fde23dcbfb53044e2bef50dad4c0af054317acc669a1c8dc2b325 \
     --hash=sha256:d43097e15922fd90e45a19308efc2ec63290e51f308f8501eaae705d7249df87 \
     --hash=sha256:fd1757e57d9561a6c28dfb18568890fd50d1f3e331d7ec247034c011f3086be9
-    # via
-    #   -c requirements/cuda.txt
-    #   -r requirements/test/cuda.in
+    # via -r cuda.in
 interegular==0.3.3 \
     --hash=sha256:b0c07007d48c89d6d19f7204972d369b2a77222722e126b6aa63aa721dc3b19c \
     --hash=sha256:d9b697b21b34884711399ba0f0376914b81899ce670032486d0d048344a76600
@@ -2512,7 +2475,6 @@ jinja2==3.1.6 \
     #   datamodel-code-generator
     #   fastapi
     #   genai-perf
-    #   gpt-oss
     #   lm-eval
     #   torch
 jiter==0.15.0 \
@@ -2631,7 +2593,7 @@ jiter==0.15.0 \
 jiwer==3.0.5 \
     --hash=sha256:4a215a774b6a2ad92838bfc9f64f072709557af48e3eb9d6bdbcee6819535b2d \
     --hash=sha256:5a55758fd1ed0b46a04e51eae6325ad77810511d1372dcbb2333ec8d5850f7b2
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 jmespath==1.0.1 \
     --hash=sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980 \
     --hash=sha256:90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe
@@ -2650,8 +2612,7 @@ jsonschema==4.23.0 \
     --hash=sha256:d71497fef26351a33265337fa77ffeb82423f3ea21283cd9467bb03999266bc4 \
     --hash=sha256:fbadb6f8b144a8f8cf9f0b89ba94501d143e50411a1278633f56a7acf7fd5566
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   hypothesis-jsonschema
     #   mcp
     #   mistral-common
@@ -2694,14 +2655,6 @@ junit-xml==1.9 \
     --hash=sha256:de16a051990d4e25a3982b2dd9e89d671067548718866416faec14d9de56db9f \
     --hash=sha256:ec5ca1a55aefdd76d28fcc0b135251d156c7106fa979686a4b48d62b761b4732
     # via schemathesis
-jupyter-client==8.10.0 \
-    --hash=sha256:5f73f24f22fa25192cfff6b23c051932a2473a797b05734aff495b392103e14e \
-    --hash=sha256:9f7116294dca55f1785be880057d44544db9b1567718d92cb33c58886afb9497
-    # via gpt-oss
-jupyter-core==5.9.1 \
-    --hash=sha256:4d09aaff303b9566c3ce657f580bd089ff5c91f5f89cf7d8846c3cdf465b5508 \
-    --hash=sha256:ebf87fdc6073d142e114c72c9e29a9d7ca03fad818c5d300ce2adc1fb0743407
-    # via jupyter-client
 kaldi-native-fbank==1.22.3 \
     --hash=sha256:0a332ed459f02532f35ea7fe6d55af9e90a636c0b95493dadd7d3284e844b3c2 \
     --hash=sha256:0ba6f11d8eb686503ee034816f7fcfa0aa14f18d27ed683b43d020080d9cd009 \
@@ -2745,7 +2698,7 @@ kaldi-native-fbank==1.22.3 \
     --hash=sha256:f5a44b4a83cf9bf13d3f77858928068b06d3ec2238c27ff2e39393fbf7749c9f \
     --hash=sha256:f74b85948328ab4b4c88522f98a59f83dd5295443b08483e945c7de2c35e5dcc \
     --hash=sha256:fc78134a588fd6f7ce61e45495524c1bb6c487ffe1c1bc7360b8084f2b0d6921
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 kaleido==0.2.1 \
     --hash=sha256:4670985f28913c2d063c5734d125ecc28e40810141bdb0a46f15b76c1d45f23c \
     --hash=sha256:845819844c8082c9469d9c17e42621fbf85c2b237ef8a86ec8a8527f98b6512a \
@@ -2873,9 +2826,7 @@ kiwisolver==1.4.7 \
 lark==1.2.2 \
     --hash=sha256:c2276486b02f0f1b90be155f2c8ba4a8e194d42775786db622faccd652d8e80c \
     --hash=sha256:ca807d0162cd16cef15a8feecb862d7319e7a09bdb13aef927968e45040fed80
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 lazy-loader==0.4 \
     --hash=sha256:342aa8e14d543a154047afb4ba8ef17f5563baad3fc610d7b15b213b0f119efc \
     --hash=sha256:47c75182589b91a4e1a85a136c074285a5ad4d9f39c63e0d7fb76391c4574cd1
@@ -2889,8 +2840,8 @@ libnacl==2.1.0 \
 librosa==0.10.2.post1 \
     --hash=sha256:cd99f16717cbcd1e0983e37308d1db46a6f7dfc2e396e5a9e61e6821e44bd2e7 \
     --hash=sha256:dc882750e8b577a63039f25661b7e39ec4cfbacc99c1cffba666cd664fb0a7a0
-    # via -r requirements/test/cuda.in
-llguidance==1.7.6 \
+    # via -r cuda.in
+llguidance==1.7.6 ; platform_machine == "x86_64" or platform_machine == "arm64" or platform_machine == "aarch64" or platform_machine == "ppc64le" or platform_machine == "s390x" \
     --hash=sha256:0444020249cde1292f13acf786e35c245fd3572d466877d2734824a9026e55aa \
     --hash=sha256:0fda51daa7951217ca164f735e96a1929d9aefb804a0b28ee43b16173e1c7325 \
     --hash=sha256:1158cfce353d331859054aad80a5543167da8b45e01c18f93272027a155df449 \
@@ -2907,9 +2858,7 @@ llguidance==1.7.6 \
     --hash=sha256:e9f68206e0f3f89aceabb90aa1f8ed570db22fb7cb1fd9ebf96fa7727a65af55 \
     --hash=sha256:eabf4572c8731734c0444c353b9ea06bc5c156986d2ff0a4ec0499159271381f \
     --hash=sha256:ef907a562d91f32e13cb3131ee5e1574b9ba5beac5bceedd795f8316a16d94d6
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 llvmlite==0.47.0 \
     --hash=sha256:003bcf7fa579e14db59c1a1e113f93ab8a06b56a4be31c7f08264d1d4072d077 \
     --hash=sha256:12a69d4bb05f402f30477e21eeabe81911e7c251cecb192bed82cd83c9db10d8 \
@@ -2937,16 +2886,14 @@ llvmlite==0.47.0 \
     --hash=sha256:f9d118bc1dd7623e0e65ca9ac485ec6dd543c3b77bc9928ddc45ebd34e1e30a7 \
     --hash=sha256:fa1cbd800edd3b20bc141521f7fd45a6185a5b84109aa6855134e81397ffe72b
     # via numba
-lm-eval==0.4.12 \
+lm-eval[api]==0.4.12 \
     --hash=sha256:02971ff68284dd14cfa7fce9310a58452c4162e8d413ba96aa7988a0ff9352ef \
     --hash=sha256:45938d7c8024d5eee5c8a0da36abe7cc09c252413c577cf81666f0fcd28b4345
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 lm-format-enforcer==0.11.3 \
     --hash=sha256:cf586350875def1ae7a8fba84fcbbfc8371424b6c9d05c1fcba70aa233fbf06f \
     --hash=sha256:e68081c108719cce284a9bcc889709b26ffb085a1945b5eba3a12cfa96d528da
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 loguru==0.7.3 \
     --hash=sha256:19480589e77d47b8d85b2c827ad95d49bf31b0dcde16593892eb51dd18706eb6 \
     --hash=sha256:31a33c10c8e1e10422bfd431aeb5d351c7cf7fa671e3c4df004162264b28220c
@@ -3129,15 +3076,14 @@ lxml==6.1.3 \
     --hash=sha256:febd35ef45f603c2d74b74655efdbf45e14f55fc0aef4ac82b663ca829b283e0 \
     --hash=sha256:ff88a92cafde90888511242d1c54afcc1a8adbb6dc0a88fa7f87e29e92400d4a
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   blobfile
-    #   gpt-oss
     #   sacrebleu
 mako==1.4.3 \
     --hash=sha256:723296007c870bfd6b3f0c3230dba7198096e5269297ebf5e4eff9e7ffa39d4f \
     --hash=sha256:cd6537fe88d5fec315c55c2f8529bc4ce7a9a352ad7db3eeaa6a66e2dd4ec37a
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   alembic
 markdown-it-py==3.0.0 \
     --hash=sha256:355216845c60bd96232cd8d8c40e8f9765cc86f46880e43a8fd22dc1a1a8cab1 \
@@ -3250,7 +3196,7 @@ matplotlib==3.9.2 \
     --hash=sha256:f32c7410c7f246838a77d6d1eff0c0f87f3cb0e7c4247aebea71a6d5a68cab49 \
     --hash=sha256:f6ee45bc4245533111ced13f1f2cace1e7f89d1c793390392a80c139d6cf0e6c \
     --hash=sha256:f7c0410f181a531ec4e93bbc27692f2c71a15c2da16766f5ba9761e7ae518413
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 mbstrdecoder==1.1.3 \
     --hash=sha256:d66c1ed3f2dc4e7c5d87cd44a75be10bc5af4250f95b38bbaedd7851308ce938 \
     --hash=sha256:dcfd2c759322eb44fe193a9e0b1b86c5b87f3ec5ea8e1bb43b3e9ae423f1e8fe
@@ -3261,9 +3207,7 @@ mbstrdecoder==1.1.3 \
 mcp==2.3.0 \
     --hash=sha256:8b147a50441cf059dc88c684e0aeed3687f0aa0f39c6cde7b90330effd2b34d8 \
     --hash=sha256:dd0c44c089d16453e8ae31a3877a0054d7a2314caaa81f5e0541b9b1734b2377
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 mcp-types==2.3.0 \
     --hash=sha256:968efdbdaedfab06adae40d378a34395f1090c5921d4be3c9cde283aaf76d91d \
     --hash=sha256:d1e46549edb35ee19a94940fcee6d1addd7e589ab7ea92dda83f5d84781fc362
@@ -3272,19 +3216,17 @@ mdurl==0.1.2 \
     --hash=sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8 \
     --hash=sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
     # via markdown-it-py
-mistral-common==1.13.0 \
+mistral-common[audio,image,opencv,soundfile,soxr]==1.13.0 \
     --hash=sha256:6304455b69ae9ca02cddb9bb3bb888ab8dcbe3945a3cafe3368897795611993d \
     --hash=sha256:8559b6e22e9b15d4d7445ae34db6d27578f3a6c0e3d74c5fd57b4bf2db543333
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   -r requirements/test/cuda.in
+    #   -r ../common.txt
+    #   -r cuda.in
+    #   mistral-common
 model-hosting-container-standards==0.1.16 \
     --hash=sha256:47f4f65713120bc3a69feb022981a38db9e557aedf88dbd72077f20588caa12b \
     --hash=sha256:d34589633900e53c3ee5f7c78280a7cf7e4f6532c35e763341a262fc85cbe84a
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 more-itertools==10.5.0 \
     --hash=sha256:037b0d3203ce90cca8ab1defbbdac29d5f993fc20131f3664dc8d6acfa872aef \
     --hash=sha256:5482bfef7849c25dc3c6dd53a6173ae4795da2a41a80faea6700d9f5846c5da6
@@ -3396,7 +3338,7 @@ msgpack==1.2.3 \
     --hash=sha256:fafc3b8898b432b841d30a61082c599fa7f4d06885f9dc58ad72259e12059fa6 \
     --hash=sha256:fcc6800daac4922960f6eeb7a0dda3dd4105e0bf7bce0e83ebc465a78cb7bdba
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   librosa
     #   ray
 msgspec==0.21.1 \
@@ -3449,11 +3391,11 @@ msgspec==0.21.1 \
     --hash=sha256:f667b90b37fad734a91671abd68e0d7f4d066862771b87e91c53996dcb7a9027 \
     --hash=sha256:f7b27d1a8ead2b6f5b0c4f2d07b8be1ccfcc041c8a0e704781edebe3ae13c484 \
     --hash=sha256:fab48eb45fdbfbdb2c0edfec00ffc53b6b6085beefc6b50b61e01659f9f8757f
-    # via -r requirements/test/../common.txt
-mteb==2.8.3 \
+    # via -r ../common.txt
+mteb[bm25s]==2.8.3 \
     --hash=sha256:2054d1b05c3bc6b14b0c82d438e6e74e310ada475efa54a6e615d1132007ba75 \
     --hash=sha256:7152a286cec0553e804a919eece1636176e3004b38d82d407bc6ef70b4edc55a
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 multidict==7.1.0 \
     --hash=sha256:0179698c3c913eb64f32397083747fad20ed0f0a2b7469a08cd1a8a95d14d90e \
     --hash=sha256:034b0dc1b7fb8279599c5d8563f86abb4d2454735b06544ecab23c54572ad2bd \
@@ -3627,8 +3569,7 @@ multidict==7.1.0 \
     --hash=sha256:fed6b7705d49dd07e5e0dd5f5c873fc44047e92d714299b13245b5fecac49d01 \
     --hash=sha256:ff15531a376dc6f35984443fd1429e4b150c36ce27633e7cc52a9e5318546e20
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   aiohttp
     #   yarl
 multiprocess==0.70.16 \
@@ -3677,17 +3618,17 @@ ninja==1.13.0 \
     --hash=sha256:fa2a8bfc62e31b08f83127d1613d10821775a0eb334197154c4d6067b7068ff1 \
     --hash=sha256:fb46acf6b93b8dd0322adc3a4945452a4e774b75b91293bafcc7b7f8e6517dfa \
     --hash=sha256:fb8ee8719f8af47fed145cced4a85f0755dd55d45b2bddaf7431fa89803c5f3e
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 nltk==3.10.3 \
     --hash=sha256:bb9327a461c3811c2fa4900e03840401f2126adfb30c0072827c433bd2444ea4 \
     --hash=sha256:ff9598a8e20518ee0d557745890cc4435b9578489e2dcbc69c4f81fa060caf7c
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   rouge-score
 num2words==0.5.14 \
     --hash=sha256:1c8e5b00142fc2966fd8d685001e36c4a9911e070d1b120e1beb721fa1edb33d \
     --hash=sha256:b066ec18e56b6616a3b38086b5747daafbaa8868b226a36127e0451c0cf379c6
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 numba==0.65.0 \
     --hash=sha256:032b0b8e879512cd424d79eed6d772a1399c6387ded184c2cf3cc22c08d750a6 \
     --hash=sha256:05c0a9fdf75d85f57dee47b719e8d6415707b80aae45d75f63f9dc1b935c29f7 \
@@ -3715,8 +3656,7 @@ numba==0.65.0 \
     --hash=sha256:edad0d9f6682e93624c00125a471ae4df186175d71fd604c983c377cdc03e68b \
     --hash=sha256:ee336b398a6fca51b1f626034de99f50cb1bd87d537a166275158a3cee744b82
     # via
-    #   -c requirements/cuda.txt
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   librosa
 numpy==2.2.6 \
     --hash=sha256:038613e9fb8c72b0a41f025a7e4c3f0b7a1b5d768ece4796b674c8f3fe13efff \
@@ -3775,7 +3715,7 @@ numpy==2.2.6 \
     --hash=sha256:fe27749d33bb772c80dcd84ae7e8df2adc920ae8297400dabec45f0dedb3f6de \
     --hash=sha256:fee4236c876c4e8369388054d02d0e9bb84821feb1a64dd59e137e6511a551f8
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   albumentations
     #   bm25s
@@ -3787,7 +3727,6 @@ numpy==2.2.6 \
     #   evaluate
     #   fastparquet
     #   genai-perf
-    #   gpt-oss
     #   imagehash
     #   imageio
     #   librosa
@@ -3906,14 +3845,11 @@ nvidia-nvtx==13.0.85 \
 open-clip-torch==2.32.0 \
     --hash=sha256:0220bc111162527eb738c1fe20dbfd6ea45dfe44726b54a4de18d3945d8f2f00 \
     --hash=sha256:80b35b43e37afc2b6173aa5ab0ad68744ab3a3211e624f72dfe743a162707637
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 openai==2.44.0 \
     --hash=sha256:0a2a3ab2e29aeda368700f662ff9ba0f9df17ba4c54577a64e08b8115a3cc0ad \
     --hash=sha256:68a5a5ffad82b8ff7d451c437529fb64f7c3b8123aaf0c021966a882d9e3947d
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   gpt-oss
+    # via -r ../common.txt
 opencensus==0.11.4 \
     --hash=sha256:a18487ce68bc19900336e0ff4655c5a116daf10c1b3685ece8d971bddad6a864 \
     --hash=sha256:cbef87d8b8773064ab60e5c2a1ced58bbaa38a6d052c41aec224958ce544eff2
@@ -3932,20 +3868,18 @@ opencv-python-headless==4.13.0.90 \
     --hash=sha256:eba38bc255d0b7d1969c5bcc90a060ca2b61a3403b613872c750bfa5dfe9e03b \
     --hash=sha256:f46b17ea0aa7e4124ca6ad71143f89233ae9557f61d2326bcdb34329a1ddf9bd
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   albumentations
     #   mistral-common
 openpyxl==3.1.5 \
     --hash=sha256:5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2 \
     --hash=sha256:cf0e3cf56142039133628b5acffe8ef0c12bc902d2aadd3e0fe5878dc08d1050
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 opentelemetry-api==1.35.0 \
     --hash=sha256:a111b959bcfa5b4d7dffc2fbd6a241aa72dd78dd8e79b5b1662bda896c5d2ffe \
     --hash=sha256:c4ea7e258a244858daf18474625e9cc0149b8ee354f37843415771a40c25ee06
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   mcp
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
@@ -3955,9 +3889,7 @@ opentelemetry-api==1.35.0 \
 opentelemetry-exporter-otlp==1.35.0 \
     --hash=sha256:8e6bb9025f6238db7d69bba7ee37c77e4858d0a1ff22a9e126f7c9e017e83afe \
     --hash=sha256:f94feff09b3524df867c7876b79c96cef20068106cb5efe55340e8d08192c8a4
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 opentelemetry-exporter-otlp-proto-common==1.35.0 \
     --hash=sha256:6f6d8c39f629b9fa5c79ce19a2829dbd93034f8ac51243cdf40ed2196f00d7eb \
     --hash=sha256:863465de697ae81279ede660f3918680b4480ef5f69dcdac04f30722ed7b74cc
@@ -3988,8 +3920,7 @@ opentelemetry-sdk==1.35.0 \
     --hash=sha256:223d9e5f5678518f4842311bb73966e0b6db5d1e0b74e35074c052cd2487f800 \
     --hash=sha256:2a400b415ab68aaa6f04e8a6a9f6552908fb3090ae2ff78d6ae0c597ac581954
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-exporter-otlp-proto-http
     #   opentelemetry-exporter-prometheus
@@ -4001,9 +3932,7 @@ opentelemetry-semantic-conventions==0.56b0 \
 opentelemetry-semantic-conventions-ai==0.4.13 \
     --hash=sha256:883a30a6bb5deaec0d646912b5f9f6dcbb9f6f72557b73d0f2560bf25d13e2d5 \
     --hash=sha256:94efa9fb4ffac18c45f54a3a338ffeb7eedb7e1bb4d147786e77202e159f0036
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 optuna==3.6.1 \
     --hash=sha256:146e530b57b4b9afd7526b3e642fbe65491f7e292b405913355f8e438e361ecf \
     --hash=sha256:b32e0490bd6552790b70ec94de77dd2855057c9e229cd9f4da48fe8a31c7f1cc
@@ -4075,9 +4004,8 @@ orjson==3.12.0 \
     --hash=sha256:f3c0683136acdc29afdf88a5bc2f7d3d0e34087788d1d63c0144b805a87a196f \
     --hash=sha256:fb2539159dfe8d371914f354360fa50e4a577cc89222a3828b9650a5e5040252
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   -r requirements/test/cuda.in
+    #   -r ../common.txt
+    #   -r cuda.in
     #   genai-perf
 oss-harmony==0.0.11 \
     --hash=sha256:036505bfb39c6b50edcf717349518d269bb375207f7f8e95f517e938b8f2e0c8 \
@@ -4093,9 +4021,7 @@ oss-harmony==0.0.11 \
     --hash=sha256:f1f74ef7f8be32fa1dcfe1644839af5f0873acce78b5668c2aa39f26d83218ff \
     --hash=sha256:f215934b05f3a7658e0cf30cf92bc25f4aed125a693529c53dd97325ecfbf7ef \
     --hash=sha256:fd91609eef825f342ae7ac990651cfebcf28aac6b6ad1186bf37c5b593cdf950
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 outlines-core==0.2.14 \
     --hash=sha256:056f656ea6e4807338963377afb50b9d936593ba3545a819f1aba56fd6e14920 \
     --hash=sha256:060a0174a6262bfd378763f210e374e52011776849a3a767df9863fb6839c142 \
@@ -4146,9 +4072,7 @@ outlines-core==0.2.14 \
     --hash=sha256:f0e5037153b5b3abfb617f6dfdc3ff28b6fab50f0de5936ea6995f5675d23e0b \
     --hash=sha256:f753edd430ac27e6dcde5a614665888db72b78c666aa160c478afd1eb986fb8b \
     --hash=sha256:fd7d432817978ea474de428ed6ca5ed3195812f8cfb787b85fb5ec0a51a440d2
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 packaging==24.2 \
     --hash=sha256:09abb1bccd265c01f4a3aa3f7a7db064b36514d2cba19a2f694fe6150451a759 \
     --hash=sha256:c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f
@@ -4222,12 +4146,11 @@ pandas==2.2.3 \
     #   evaluate
     #   fastparquet
     #   genai-perf
-    #   gpt-oss
     #   statsmodels
 partial-json-parser==0.2.1.1.post7 \
     --hash=sha256:145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae \
     --hash=sha256:86590e1ba6bcb6739a2dfc17d2323f028cb5884f4c6ce23db376999132c9a922
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 pathspec==1.1.1 \
     --hash=sha256:17db5ecd524104a120e173814c90367a96a98d07c45b2e10c2f3919fff91bf5a \
     --hash=sha256:a00ce642f577bf7f473932318056212bc4f8bfdf53128c78bbd5af0b9b20b189
@@ -4243,11 +4166,11 @@ patsy==1.0.1 \
 peft==0.21.1 \
     --hash=sha256:6b99d659a33acc17295c0838f1e58267337b8c30ac9aef0c8f2d48364d3f24e2 \
     --hash=sha256:95f239f84da1919a6d0c64c4049650a6a79804e3a87c78f35c597da771e31f68
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 perceptron==0.1.4 \
     --hash=sha256:62fd190efb74925e2cc33c0cd38761e19959be3bdb7b24fbf9e3386d6961f690 \
     --hash=sha256:f490a6df6c15167e91e1a528601cae98ce99a30991cf792f9ef83ebc15d335c4
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 perf-analyzer==0.1.0 \
     --hash=sha256:3c7d7b790b0fbcfcd478063f7d1450dbaa5e71c127a25ee810841d1a06bc5748
     # via genai-perf
@@ -4336,8 +4259,7 @@ pillow==13.0.0 \
     --hash=sha256:ff3fe9eb621fbb9db4c4be33ab946f6bac5f98ab50ca8d3260503653656c961b \
     --hash=sha256:ffea6b2986a797c84b6d1d27d4f43e0b83c73fc16281a930891cd237cf0d08fe
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   genai-perf
     #   imagehash
     #   imageio
@@ -4352,14 +4274,13 @@ platformdirs==4.3.6 \
     --hash=sha256:73e575e1408ab8103900836b97580d5307456908a03e92031bab39e4554cc3fb
     # via
     #   black
-    #   jupyter-core
     #   pooch
     #   virtualenv
 plotly==5.24.1 \
     --hash=sha256:dbc8ac8339d248a4bcc36e08a5659bacfe1b079390b8953533f4eb22169b4bae \
     --hash=sha256:f67073a1e637eb0dc3e46324d9d51e2fe76e9727c892dde64ddf1e1b51f29089
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   genai-perf
 pluggy==1.5.0 \
     --hash=sha256:2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1 \
@@ -4387,22 +4308,19 @@ portalocker==2.10.1 \
 pqdm==0.2.0 \
     --hash=sha256:0da33a22ebee349a047abf8ef7fd00d85403638101d5e374b421a74188231b62 \
     --hash=sha256:d99d01fe498d327b440ebfe08c14c84e0dc9ecce6172ef9a31f96bb1aaf4e9e3
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 prometheus-client==0.22.0 \
     --hash=sha256:18da1d2241ac2d10c8d2110f13eedcd5c7c0c8af18c926e8731f04fc10cd575c \
     --hash=sha256:c8951bbe64e62b96cd8e8f5d917279d1b9b91ab766793f33d4dce6c228558713
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   opentelemetry-exporter-prometheus
     #   prometheus-fastapi-instrumentator
     #   ray
 prometheus-fastapi-instrumentator==8.0.2 \
     --hash=sha256:3c252e748151768a7aefd66824a04a870144f71de48a67aed211749a9ca2a548 \
     --hash=sha256:746002ec1e2c58b93f61444e1d104de959a9463a6a3f1c8909ac3757e16c3866
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 propcache==0.5.4 \
     --hash=sha256:004e685b315646c410771836e72a44f143bbe624f29653a42687815069a303d5 \
     --hash=sha256:02c0a34f16889cf800f10f0247a564d8ce6eeab6ffcd7c87198f769067eb8432 \
@@ -4549,7 +4467,7 @@ proto-plus==1.26.1 \
     --hash=sha256:13285478c2dcf2abb829db158e1047e2f1e8d63a077d94263c2b88b043c75a66 \
     --hash=sha256:21a515a4c4c0088a773899e23c7bbade3d18f9c66c73edd4c7ee3816bc96a012
     # via google-api-core
-protobuf==6.33.6 \
+protobuf==6.33.6 ; platform_machine != "s390x" \
     --hash=sha256:0cd27b587afca21b7cfa59a74dcbd48a50f0a6400cfb59391340ad729d91d326 \
     --hash=sha256:77179e006c476e69bf8e8ce866640091ec42e1beb80b213c3900006ecfba6901 \
     --hash=sha256:7d29d9b65f8afef196f8334e80d6bc1d5d4adedb449971fefd3723824e6e77d3 \
@@ -4561,8 +4479,7 @@ protobuf==6.33.6 \
     --hash=sha256:e9db7e292e0ab79dd108d7f1a94fe31601ce1ee3f7b79e0692043423020b0593 \
     --hash=sha256:f443a394af5ed23672bc6c486be138628fbe5c651ccbc536873d7da23d1868cf
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   google-api-core
     #   googleapis-common-protos
     #   grpcio-reflection
@@ -4589,7 +4506,7 @@ psutil==6.1.0 \
     --hash=sha256:d905186d647b16755a800e7263d43df08b790d709d575105d419f8b6ef65423a \
     --hash=sha256:ff34df86226c0227c52f38b919213157588a678d049688eded74c76c8ba4a5d0
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   peft
     #   tensorizer
@@ -4600,7 +4517,7 @@ py==1.11.0 \
 py-cpuinfo==9.0.0 \
     --hash=sha256:3cdbbf3fac90dc6f118bfd64384f309edeadd902d7c8fb17f02ffa1fc3f49690 \
     --hash=sha256:859625bc251f64e21f077d099d4162689c762b5d6a4c3c97553d56241c9674d5
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 py-spy==0.4.0 \
     --hash=sha256:47cdda4c34d9b6cb01f3aaeceb2e88faf57da880207fe72ff6ff97e9bb6cc8a9 \
     --hash=sha256:77d8f637ade38367d944874776f45b703b7ac5938b1f7be8891f3a5876ddbb96 \
@@ -4656,14 +4573,14 @@ pyarrow==25.0.1 \
     --hash=sha256:f3831aaa25c67a99f99dc8b05873cb9d64560390372e2aa197ce9dd4a3f06a44 \
     --hash=sha256:f729cfdbd36fd99d543b67a914d2de044c84ebe45be8b34902b299b608c15c8f
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   datasets
     #   genai-perf
-pyasn1==0.6.4 \
-    --hash=sha256:9c447d8431c947fe4c8febc4ed9e760bc29011a5b01e5c74b67025bd9fb8ce81 \
-    --hash=sha256:deda9277cfd454080ec40b207fb6df82206a3a2688735233cdcd8d3d565f088b
+pyasn1==0.6.5 \
+    --hash=sha256:4017b0fce125096b8573b39c989fdb1a4b19cf761e683398184550fea0e66587 \
+    --hash=sha256:6b11616a6bcf3a40e635f082bb232fa57b5e0dd7f517bd7ddd69ec3794508a47
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   pyasn1-modules
     #   rsa
 pyasn1-modules==0.4.2 \
@@ -4886,7 +4803,7 @@ pybase64==1.4.3 \
     --hash=sha256:fb68a3a7031096d01b13ece0b341f14073382f76dd302599fbe9c738981ce197 \
     --hash=sha256:fb852f900e27ffc4ec1896817535a0fa19610ef8875a096b59f21d0aa42ff172 \
     --hash=sha256:fc3fefa4ac57a030e1982b6fd2df71ae69460465227b057b90dadd53c60575ea
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 pycountry==24.6.1 \
     --hash=sha256:b61b3faccea67f87d10c1f2b0fc0be714409e8fcdcc1315613174f6466c10221 \
     --hash=sha256:f1a4fb391cd7214f8eefd39556d740adcc233c778a27f8942c8dca351d6ce06f
@@ -4940,12 +4857,11 @@ pycxxfilt==0.1.0 \
     --hash=sha256:eaedfc3411f458aaa5fab78aab989c4c011c81e3cb4a2535c3e0b7cfebbe8fd2 \
     --hash=sha256:f92dd5fa4e062dcbc31b4e3df1a74661c6c3958a2df2bf0725b626813e36522b
     # via torch-abi-audit
-pydantic==2.12.0 \
+pydantic[email]==2.12.0 \
     --hash=sha256:c1a077e6270dbfb37bfd8b498b3981e2bb18f68103720e51fa6c306a5a9af563 \
     --hash=sha256:f6a1da352d42790537e95e83a8bdfb91c7efbae63ffd0b86fa823899e807116f
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   albumentations
     #   anthropic
     #   cohere
@@ -4953,7 +4869,6 @@ pydantic==2.12.0 \
     #   datamodel-code-generator
     #   fastapi
     #   fastapi-cloud-cli
-    #   gpt-oss
     #   lm-format-enforcer
     #   mcp
     #   mcp-types
@@ -5083,7 +4998,7 @@ pydantic-core==2.41.1 \
     # via
     #   cohere
     #   pydantic
-pydantic-extra-types==2.10.5 \
+pydantic-extra-types[pycountry]==2.10.5 \
     --hash=sha256:1dcfa2c0cf741a422f088e0dbb4690e7bfadaaf050da3d6f80d6c3cf58a2bad8 \
     --hash=sha256:b60c4e23d573a69a4f1a16dd92888ecc0ef34fb0e655b4f305530377fa70e7a8
     # via
@@ -5093,20 +5008,20 @@ pydantic-settings==2.14.2 \
     --hash=sha256:a20c97b37910b6550d5ea50fbcc2d4187defe58cd57070b73863d069419c9440 \
     --hash=sha256:c19dd64b19097f1de80184f0cc7b0272a13ae6e170cbf240a3e27e381ed14a5f
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   fastapi
 pygments==2.21.0 \
     --hash=sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9 \
     --hash=sha256:610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   pytest
     #   rich
-pyjwt==2.15.1 \
+pyjwt[crypto]==2.15.1 \
     --hash=sha256:42d59d631f7768a1028a64c7ff581a9bf7519804daf91fc5b6c56e30eec5e193 \
     --hash=sha256:4f259e80cdfb6b3fc18a7de51fd1ef9ec79652f25019bae68975ca2468a34df8
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   mcp
     #   msal
 pyparsing==3.2.0 \
@@ -5209,7 +5124,7 @@ pytest==9.1.0 \
     --hash=sha256:41dd9148c08072446394cefd3d79701701335a9f4cae69ba92e39f6c7f5c061c \
     --hash=sha256:8ebb0e7888bdf2bdfc602ec51f8f62d50200af37356c74e503c79a94f5c81f32
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   buildkite-test-collector
     #   genai-perf
     #   pytest-asyncio
@@ -5223,15 +5138,15 @@ pytest==9.1.0 \
 pytest-asyncio==1.4.0 \
     --hash=sha256:933ca923a23075a87fb7070c0ec272a6848489824d887c85c812670932835aa1 \
     --hash=sha256:c6c0d2259945122819f171a32ecea2c349ead889ee28176caaf492143424be42
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 pytest-cov==6.3.0 \
     --hash=sha256:35c580e7800f87ce892e687461166e1ac2bcb8fb9e13aea79032518d6e503ff2 \
     --hash=sha256:440db28156d2468cafc0415b4f8e50856a0d11faefa38f30906048fe490f1749
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 pytest-forked==1.6.0 \
     --hash=sha256:4dafd46a9a600f65d822b8f605133ecf5b3e1941ebb3588e943b4e3eb71a5a3f \
     --hash=sha256:810958f66a91afb1a1e2ae83089d8dc1cd2437ac96b12963042fbb9fb4d16af0
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 pytest-mock==3.14.0 \
     --hash=sha256:0b72c38033392a5f4621342fe11e9219ac11ec9d375f8e2a0c164539e0d70f6f \
     --hash=sha256:2719255a1efeceadbc056d6bf3df3d1c5015530fb40cf347c0f9afac88410bd0
@@ -5239,21 +5154,20 @@ pytest-mock==3.14.0 \
 pytest-rerunfailures==14.0 \
     --hash=sha256:4197bdd2eaeffdbf50b5ea6e7236f47ff0e44d1def8dae08e409f536d84e7b32 \
     --hash=sha256:4a400bcbcd3c7a4ad151ab8afac123d90eca3abe27f98725dc4d9702887d2e92
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 pytest-shard==0.1.2 \
     --hash=sha256:407a1df385cebe1feb9b4d2e7eeee8b044f8a24f0919421233159a17c59be2b9 \
     --hash=sha256:b86a967fbfd1c8e50295095ccda031b7e890862ee06531d5142844f4c1d1cd67
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 pytest-timeout==2.3.1 \
     --hash=sha256:12397729125c6ecbdaca01035b9e5239d4db97352320af155b3f5de1ba5165d9 \
     --hash=sha256:68188cb703edfc6a18fad98dc25a3c61e9f24d644b0b70f33af545219fc7813e
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 python-dateutil==2.9.0.post0 \
     --hash=sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3 \
     --hash=sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427
     # via
     #   botocore
-    #   jupyter-client
     #   matplotlib
     #   pandas
     #   typepy
@@ -5270,12 +5184,12 @@ python-dotenv==1.2.2 \
 python-json-logger==4.1.0 \
     --hash=sha256:132994765cf75bf44554be9aa49b06ef2345d23661a96720262716438141b6b2 \
     --hash=sha256:b396b9e3ed782b09ff9d6e4f1683d46c83ad0d35d2e407c09a9ebbf038f88195
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 python-multipart==0.0.32 \
     --hash=sha256:be54b7f3fa167bb83e4fcd936b887b708f4e57fe75911c02aebf53efaf8d938e \
     --hash=sha256:ff6d3f776f16878c894e52e107296ffc890e913c611b1a4ec6c44e2821fe2e23
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   fastapi
     #   mcp
 python-rapidjson==1.20 \
@@ -5555,7 +5469,7 @@ pyyaml==6.0.2 \
     --hash=sha256:f753120cb8181e736c57ef7636e83f31b9c0d1722c516f7e86cf15b7aa57ff12 \
     --hash=sha256:ff3824dc5261f50c9b0dfb3be22b4567a6f938ccce4587b38952d85fd9e9afe4
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   albumentations
     #   datamodel-code-generator
@@ -5665,10 +5579,7 @@ pyzmq==27.1.0 \
     --hash=sha256:f605d884e7c8be8fe1aa94e0a783bf3f591b84c24e4bc4f3e7564c82ac25e271 \
     --hash=sha256:fbb4f2400bfda24f12f009cba62ad5734148569ff4949b1b6ec3b519444342e6 \
     --hash=sha256:ff8d114d14ac671d88c89b9224c63d6c4e5a613fe8acd5594ce53d752a3aafe9
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   jupyter-client
+    # via -r ../common.txt
 rapidfuzz==3.12.1 \
     --hash=sha256:00ceb8ff3c44ab0d6014106c71709c85dee9feedd6890eff77c814aa3798952b \
     --hash=sha256:018506a53c3b20dcbda8c93d4484b9eb1764c93d5ea16be103cf6b0d8b11d860 \
@@ -5759,7 +5670,7 @@ rapidfuzz==3.12.1 \
     --hash=sha256:fbe7580b5fb2db8ebd53819171ff671124237a55ada3f64d20fc9a149d133960 \
     --hash=sha256:fd37e53f0ed239d0cec27b250cec958982a8ba252ce64aa5e6052de3a82fa8db
     # via jiwer
-ray==2.56.1 \
+ray[default]==2.56.1 \
     --hash=sha256:44bc0000c5bfad85b2ff6e0ef91e95f901d1a2d2fdd72f94f08a046eb494cd61 \
     --hash=sha256:49aa1f8aa1799a6b63adc8e4edd600b949b2bb648461abedcbcccd56c8ef0f82 \
     --hash=sha256:4df45f33cc176b11c69191efdcfb4aceaeea22fecfa784f6485b6504ef8c8b26 \
@@ -5778,7 +5689,7 @@ ray==2.56.1 \
     --hash=sha256:e5d3173696831134c76bd09451dfe95c32d72c271253b0d6b09d2df9994aa660 \
     --hash=sha256:e7003a47a42ef2ad33ec0b34dc5b6afb03f63fe59465e6f4c8f6d05492d9e4a6 \
     --hash=sha256:ea372c7f95b14f1f76f0bdd2abc9602c56e88bc30699d2228f78133e7749b2f1
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 redis==5.2.0 \
     --hash=sha256:0b1087665a771b1ff2e003aa5bdd354f15a70c9e25d5a7dbf9c722c16528a7b0 \
     --hash=sha256:ae174f2bb3b1bf2b09d54bf3e51fbc1469cf6c10aa03e21141f51969801a7897
@@ -5905,7 +5816,7 @@ regex==2026.2.28 \
     --hash=sha256:fd0ce43e71d825b7c0661f9c54d4d74bd97c56c3fd102a8985bcfea48236bacb \
     --hash=sha256:fd63453f10d29097cc3dc62d070746523973fb5aa1c66d25f8558bebd47fed61
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   nltk
     #   open-clip-torch
     #   sacrebleu
@@ -5915,17 +5826,14 @@ requests==2.34.2 \
     --hash=sha256:2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0 \
     --hash=sha256:f288924cae4e29463698d6d60bc6a4da69c89185ad1e0bcc4104f584e960b9ed
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   azure-core
     #   buildkite-test-collector
     #   cohere
     #   datasets
-    #   docker
     #   evaluate
     #   google-api-core
     #   google-cloud-storage
-    #   gpt-oss
     #   lm-eval
     #   mistral-common
     #   msal
@@ -6227,10 +6135,10 @@ rsa==4.9.1 \
     --hash=sha256:68635866661c6836b8d39430f97a996acbd61bfa49406748ea243539fe239762 \
     --hash=sha256:e7bdbfdb5497da4c07dfd35530e1a902659db6ff241e39d9953cad06ebd0ae75
     # via google-auth
-runai-model-streamer==0.17.1 \
+runai-model-streamer[azure,gcs,s3]==0.17.1 \
     --hash=sha256:2dd7b4dd5bc6b0c0dd2cfc875a32af40a5dd408db8026374e93ca34f8039321f \
     --hash=sha256:3ffc2fb0edc4738e9bddf8c8606e70aa8bc28b3d1b8f2caf57f494c676735a63
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 runai-model-streamer-azure==0.17.1 \
     --hash=sha256:1a6a530c621aba4c967cc811b6a8d6a99b2f738e3b015d7a0e23ca0dcb850188 \
     --hash=sha256:f436a7ab08efdf5f0127edc14b0abb4f2934ba810181cae770dbcdd5270c734f
@@ -6270,8 +6178,7 @@ safetensors==0.8.0 \
     --hash=sha256:fcdd41ec4628fee5799f807c73c353629130fbd942aa23d83c623dd6c9d52d78 \
     --hash=sha256:fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   accelerate
     #   open-clip-torch
     #   peft
@@ -6281,7 +6188,7 @@ safetensors==0.8.0 \
 schemathesis==4.21.6 \
     --hash=sha256:0c21142c91e7b189a0b89ad8a5152b4b3071b707463d4f454f2a1ad1c0505bae \
     --hash=sha256:82c1716048b510e4064d6308fa341c8e5165a5f90390c5729f99cc923283ab0e
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 scikit-image==0.25.2 \
     --hash=sha256:24cc986e1f4187a12aa319f777b36008764e856e5013666a4a83f8df083c2641 \
     --hash=sha256:28182a9d3e2ce3c2e251383bdda68f8d88d9fff1a3ebe1eb61206595c9773341 \
@@ -6379,12 +6286,12 @@ scipy==1.13.1 \
 segmentation-models-pytorch==0.5.0 \
     --hash=sha256:c34e09047771aa4dd8878b4f899e8125700cd1f8f7db16e58c37204154151a05 \
     --hash=sha256:cabba8aced6ef7bdcd6288dd9e1dc2840848aa819d539c455bd07aeceb2fdf96
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 sentence-transformers==5.6.0 \
     --hash=sha256:0e7164d051e416c1853ade7c274ff52af3f9da0f4be7f0b83d734c27699e1057 \
     --hash=sha256:d2075b5e687a1611005e20ab04a6846994d51adfcf39610aed066af3c0c0b81f
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   mteb
 sentencepiece==0.2.1 \
     --hash=sha256:010f025a544ef770bb395091d57cb94deb9652d8972e0d09f71d85d5a0816c8c \
@@ -6452,7 +6359,7 @@ sentencepiece==0.2.1 \
     --hash=sha256:e10fa50bdbaa5e2445dbd387979980d391760faf0ec99a09bd7780ff37eaec44 \
     --hash=sha256:e37e4b4c4a11662b5db521def4e44d4d30ae69a1743241412a93ae40fdcab4bb \
     --hash=sha256:e52144670738b4b477fade6c2a9b6af71a8d0094514c9853ac9f6fc1fcfabae7
-    # via -r requirements/test/../common.txt
+    # via -r ../common.txt
 sentry-sdk==2.63.0 \
     --hash=sha256:2a1502bf864769275dbc8c2c9fc7a0f7f5e18358180b615d262d13a31ffba216 \
     --hash=sha256:3a9b5ddd403f79eb73bd670f75f04485819db53d28f76ced7bc09041cb0dfd6a
@@ -6555,16 +6462,7 @@ setproctitle==1.3.7 \
     --hash=sha256:fcb966a6c57cf07cc9448321a08f3be6b11b7635be502669bc1d8745115d7e7f \
     --hash=sha256:fe5ca35aeec6dc50cabab9bf2d12fbc9067eede7ff4fe92b8f5b99d92e21263f \
     --hash=sha256:ff3c1c32382fb71a200db8bab3df22f32e6ac7ec3170e92fa5b542cf42eed9a2
-    # via -r requirements/test/../common.txt
-setuptools==80.10.2 \
-    --hash=sha256:8b0e9d10c784bf7d262c4e5ec5d4ec94127ce206e8738f29a437945fbc219b70 \
-    --hash=sha256:95b30ddfb717250edb492926c92b5221f7ef3fbcc2b07579bcd4a27da21d0173
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   model-hosting-container-standards
-    #   pytablewriter
-    #   torch
+    # via -r ../common.txt
 shellingham==1.5.4 \
     --hash=sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686 \
     --hash=sha256:8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de
@@ -6575,8 +6473,6 @@ six==1.16.0 \
     --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
     --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
     #   junit-xml
     #   opencensus
     #   python-dateutil
@@ -6606,7 +6502,7 @@ soundfile==0.12.1 \
     --hash=sha256:d922be1563ce17a69582a352a86f28ed8c9f6a8bc951df63476ffc310c064bfa \
     --hash=sha256:e8e1017b2cf1dda767aef19d2fd9ee5ebe07e050d430f77a0a7c66ba08b8cdae
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   genai-perf
     #   librosa
     #   mistral-common
@@ -6707,8 +6603,7 @@ starlette==1.3.1 \
     --hash=sha256:05d0213193f2fbaae60e2ecb593b4add4262ad4e46536b54abe36f11a71724e0 \
     --hash=sha256:c7372aae11c3c3f26a42df7bd626cec2f47d03483d261d369516a615a53714c6
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   fastapi
     #   mcp
     #   model-hosting-container-standards
@@ -6751,10 +6646,6 @@ statsmodels==0.14.4 \
     --hash=sha256:e332c2d9b806083d1797231280602340c5c913f90d4caa0213a6a54679ce9331 \
     --hash=sha256:f5f537f7d000de4a1708c63400755152b862cd4926bb81a86568e347c19c364b
     # via genai-perf
-structlog==26.1.0 \
-    --hash=sha256:e081a26d6c373e6d201eca24eede26d8ffab07f88f477822e679183428d3d91e \
-    --hash=sha256:f63a716cbd1b1291cf7661de7794b455acfa4c43c5bcf1630e6ad5ddc1adb3b7
-    # via gpt-oss
 supervisor==4.3.0 \
     --hash=sha256:0bcb763fddafba410f35cbde226aa7f8514b9fb82eb05a0c85f6588d1c13f8db \
     --hash=sha256:4a2bf149adf42997e1bb44b70c43b613275ec9852c3edacca86a9166b27e945e
@@ -6776,7 +6667,7 @@ tabulate==0.9.0 \
 tblib==3.1.0 \
     --hash=sha256:06404c2c9f07f66fee2d7d6ad43accc46f9c3361714d9b8426e7f47e595cd652 \
     --hash=sha256:670bb4582578134b3d81a84afa1b016128b429f3d48e6cbbaecc9d15675e984e
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 tcolorpy==0.1.6 \
     --hash=sha256:8c15cb3167f30b0a433d72297e9d68667c825bd9e2af41c8dd7dfbd3d7f7e207 \
     --hash=sha256:8cea0bf5f8cf03f77528a9acfbf312df935573892ba5ea3b2516e61fa54de9a5
@@ -6785,18 +6676,13 @@ tenacity==9.1.2 \
     --hash=sha256:1169d376c297e7de388d18b4481760d478b0e99a777cad3a9c86e556f4b697cb \
     --hash=sha256:f77bf36710d8b73a50b2dd155c97b870017ad21afe6ab300326b0371b3b05138
     # via
-    #   gpt-oss
     #   lm-eval
     #   plotly
     #   schemathesis
 tensorizer==2.10.1 \
     --hash=sha256:079a4aa1db03fb6fe4e6949a78cd5f6b0070e074421da4b34216db58973dce65 \
     --hash=sha256:fe39940548a287c84891ee9dd966d6e87575312625ba46c9eda11b0b79d05028
-    # via -r requirements/test/cuda.in
-termcolor==3.3.0 \
-    --hash=sha256:348871ca648ec6a9a983a13ab626c0acce02f515b9e1983332b17af7979521c5 \
-    --hash=sha256:cf642efadaf0a8ebbbf4bc7a31cec2f9b5f21a9f726f4ccbb08192c9c26f43a5
-    # via gpt-oss
+    # via -r cuda.in
 threadpoolctl==3.5.0 \
     --hash=sha256:082433502dd922bf738de0d8bcc4fdcbf0979ff44c42bd40f5af8a282f6fa107 \
     --hash=sha256:56c1e26c150397e58c4926da8eeee87533b1e32bef131bd4bf6a2f45f3185467
@@ -6864,16 +6750,14 @@ tiktoken==0.12.0 \
     --hash=sha256:fc530a28591a2d74bce821d10b418b26a094bf33839e69042a6e86ddb7a7fb27 \
     --hash=sha256:ffc5288f34a8bc02e1ea7047b8d041104791d2ddbf42d1e5fa07822cbffe16bd
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   gpt-oss
+    #   -r ../common.txt
     #   lm-eval
     #   mistral-common
 timm==1.0.30 \
     --hash=sha256:1444a3af7e17fdba5440ac2bcf6e4b728da96dd62289ed9e1bcba31a545f5935 \
     --hash=sha256:c8e27adf6801a2fdfb570dbbdd171f2f084756eefc673df8cfaab06bd14864f3
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   open-clip-torch
     #   segmentation-models-pytorch
 tokenizers==0.23.3 \
@@ -6902,11 +6786,10 @@ tokenizers==0.23.3 \
     --hash=sha256:ec82e80e65a862275b97c3d90b7a523df8d9519ee48aeb4e9625b2cc909274e0 \
     --hash=sha256:efa3d7318406b4d115dce61ad5061953f1f44b128e79c020ce4615d763e23b6e
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   cohere
     #   transformers
-torch==2.14.0+cu130 \
+torch==2.14.0 \
     --hash=sha256:00fb5440e7560b3b21e5e24567c6096fec4ef65b50a7ef1a105ebed5755eef7e \
     --hash=sha256:07686af6e00801b04fe0feb9e9aa22ff7a58112fb60e0b29a4146f5ac553bf6b \
     --hash=sha256:12b09f9e9f91347596393a6ddb95e9bc0aa003227eb6c7cd7f20c144eac62442 \
@@ -6932,8 +6815,7 @@ torch==2.14.0+cu130 \
     --hash=sha256:e729d57eb3e0c859fa7a9c27f9f274121c2c09ae70a376ac227a650807b0457c \
     --hash=sha256:fca94b3181939ca5bdfc1f7d108a79888dec750f3683f922bda40dc4e78d6eaa
     # via
-    #   -c requirements/cuda.txt
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   accelerate
     #   compressed-tensors
     #   encodec
@@ -6953,8 +6835,8 @@ torch==2.14.0+cu130 \
 torch-abi-audit==0.0.1 \
     --hash=sha256:2024a9cde3cb6c3794b82030da7768fae23735ab214fa6eccc791495e2b73594 \
     --hash=sha256:adc0e46217c924841ad1f0d0debdc111d170185bedba2e150a8a59c4d80b8f08
-    # via -r requirements/test/cuda.in
-torchaudio==2.11.0+cu130 \
+    # via -r cuda.in
+torchaudio==2.11.0 \
     --hash=sha256:04aadf807c27df785c6e3463e70bb1a657ed2d1a16b5578114c9fdf7e8c1ac10 \
     --hash=sha256:0a36531ffb90f0b1870e994bc57643bf6466fd8c290b5b9b2b36dadc3445d0c0 \
     --hash=sha256:1cef8561494c44b12eb6a390d9f2ff52f6fa540b9a7aba6c8951c074056a2f11 \
@@ -6977,34 +6859,34 @@ torchaudio==2.11.0+cu130 \
     --hash=sha256:f9b277a0d3b2ab4385778146b7e879716f36b6f2080f7190ec744e3383511791 \
     --hash=sha256:fa4de5984cc666557d4e5eea3c50735b1ccb39b2ae284efb14b721e642eef652
     # via
-    #   -c requirements/cuda.txt
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   encodec
     #   vocos
-torchcodec==0.14.0+cu130 \
-    --hash=sha256:0067feed9b4456e205a71fa4faf4c9c776f2ebd02226f639f7015aae27263c0f \
-    --hash=sha256:26ed40fc26287e6d6f65268fdaf29017aee803763077e0746aa85fb8cd6a697b \
-    --hash=sha256:2f293c81d042bb2f88c2242f654bffb2a084b9e3cd32d6a311500dc6ba6bb40c \
-    --hash=sha256:52574161e5dc072acf0f99065cf6cbf4d17116e4c011abbbbde7ea67b560b742 \
-    --hash=sha256:54e282e1b090bf1ea7da4f29317a1eecb3b21ed8d798b5d67601ad20be34c45d \
-    --hash=sha256:58402593cff32d19d22ab9de649bc44a73adbf1275b5e14aa952f3338d6ba2f9 \
-    --hash=sha256:7e8bc23f4b20e863788815a48fae54fe13647ec5e9e03921facdfee46f95fd37 \
-    --hash=sha256:8eb9ba5d4cb65850735e63a93d86bccd2847c32fb77acc1d4b025839db0148a7 \
-    --hash=sha256:9ee5e1575078d220632ad33d854a928c6546324cb3942bf67e1438487c62d612 \
-    --hash=sha256:b192bac82652fcc0fcb68cf0ebf291f7eed8b844f279966c4b502d8b9cabee32 \
-    --hash=sha256:b4cfae4d2fd58467fccc528a1e31a0ec6fed6a4a49b9495dab50d2aada1918cf \
-    --hash=sha256:d0a938236825a3b9e970d958466e92d5546cad9c7dcfd580151b20bdf1580df3 \
-    --hash=sha256:d40b91faf022d309a878a9cd5685f20279788ca2442cd1cc06c9fef687f8f34e \
-    --hash=sha256:e249197b336b097e784d14f160913129064dff3a6e30cf0253b0f9d18baf7d3a \
-    --hash=sha256:e34f8704bba953771b41834ecaad3d954cbcdb5735b5fec3039580aaafad6618 \
-    --hash=sha256:e3debff1c1932f0b835a250247fd04cf3a1caf5ee76977e3b2a90fece0bdb90b \
-    --hash=sha256:e617a1fa40d71541b9677239ec7b7937b3910022b54fe4e98af83ce12295a0da \
-    --hash=sha256:e7f2e1c95854e4c0f39f0279d95c71c1810b0bf2e91e820ebc959a103bdb29aa \
-    --hash=sha256:f8d6baf4cf50f10905537d2e1424e604f9d788de8cfd8b0af8cc4f43b2ce5db7
-    # via
-    #   -c requirements/cuda.txt
-    #   -r requirements/test/cuda.in
-torchvision==0.29.0+cu130 \
+torchcodec==0.17.0 \
+    --hash=sha256:0771bc114ff75a30f0ea8aa82cc7b259c518214eafe73fee2e606d745d77942b \
+    --hash=sha256:0ab2f00d849ba7b24e1ddcc4ed575d988fe4ed54f39c6a55575a1a47674eff9c \
+    --hash=sha256:0af78216e6b2d13e33ecaa7b49bb06d6795cab39515449d40d2193cf1fa3e447 \
+    --hash=sha256:3d69d30fbd2d5f9cc6d63c6d970acb5fa3aeddb5524a059f0ca538a83972f65c \
+    --hash=sha256:509558ec5d4f431fe2411d8f57e8e4fd6772f799bd44e570946b66989853c402 \
+    --hash=sha256:645ea2b33596d3f1463a8a70a907fd793e6c40ad81404732b277d5eb449f8860 \
+    --hash=sha256:7c6004dbeb27a9e58bad0b3d10b4d7f7cda4407c0f10ba45a5a2ebd60aa33dbe \
+    --hash=sha256:7d58e5211ed6f04aca2bd57e6a6104f9993ceb36a290db31de3f4e6096148f0b \
+    --hash=sha256:81655cf25e168e74f27aee29db9fc16e37a9f5b2a188a0f7fe25cdfaab2ddd2e \
+    --hash=sha256:8806e967d598d0d8ff0214837d9fb7565f06c7676f56ec172d5c57574e59d5b8 \
+    --hash=sha256:916ff04f0accda465b6b33a9926d1b9daae6414e81abed5987b78c87374e6e8a \
+    --hash=sha256:9267dc578c4de6710d4686d52bb2e8dc9a44ad404e775957f4428375311ebc60 \
+    --hash=sha256:94f3391db6a35b1fe4f1c41f02e6fb3950ba62020f2812b67d317bc3d2cb8966 \
+    --hash=sha256:9567427ba28cee36704104f66bbaebfc210b89204fceb3063ca09a3fdeb0ac02 \
+    --hash=sha256:9eb27bc90ad1d60fbded1415e8106961d5f9e4bc80b3010217cfe6a08ad967ce \
+    --hash=sha256:aa5cf864c6a3ee42fa45961ec469ae359fbca448fb3440b86c84c9f77dd130aa \
+    --hash=sha256:b387f1d935d5a60ebad6de0144d728f5802de9253a65fb1570a6f2ad646c9d3b \
+    --hash=sha256:b7a2a30f0372f4b0caae71a598c20e6d5ef7bf55dae2576003d6a6ffeccb9153 \
+    --hash=sha256:ba26d900b3941eac8176b5c42bed0e2315cc154f07037a385e211ec39af989bf \
+    --hash=sha256:d9e682f91bc70a34a8c7ea3d302b3d6f52970b97c5b81aa098478197abf17fc6 \
+    --hash=sha256:defd5f0901999c9e981f6465a0f4aac8b5a5147e38e539b77c0711c015cf5349 \
+    --hash=sha256:fc7021f10d38debd4fd47b4620da50d8cead981752bb359f7e3a615bbca2b7d3
+    # via -r cuda.in
+torchvision==0.29.0 \
     --hash=sha256:0602b0423bb4b82eaaa95aedbfa1b5e278648095e88cad059b8ff91a9554795b \
     --hash=sha256:0a9f1fcdad5d737e2f0a29a9058c83ecf1b5bbb825086cf7e7e7cb5036907b3f \
     --hash=sha256:0b81c8498f7f19ca0aac39c0d5810e4a94137a89ba9194e7d7dec08cbd4d5bc3 \
@@ -7030,31 +6912,17 @@ torchvision==0.29.0+cu130 \
     --hash=sha256:f8ece17c7da6725073d73cee1ce539837a368d14b0beb7bbad91a2dc7ddda584 \
     --hash=sha256:fb681a367becdbf40cd559f1b553be79832885a58414980e77bed192fd960673
     # via
-    #   -c requirements/cuda.txt
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   open-clip-torch
     #   segmentation-models-pytorch
     #   timm
-tornado==6.5.10 \
-    --hash=sha256:302eb1e0e3e159314eb591920529fdea80acca92df5510a2cec5bbd4f099ec72 \
-    --hash=sha256:37ae8f150cecfdbf747fc4e12f5e9a97ecd8cf1d4cdb3f119e2de84b11196918 \
-    --hash=sha256:4bd192b959f9128fb99b8898148070ba4574c9589b78bce42d1851131fe85828 \
-    --hash=sha256:66aaa3f57d30c6e6becee83ff28055d5930ac724214bde99393eefda83d5e015 \
-    --hash=sha256:69acca6501eed74582b76dbbceee2a91613f54728e3e418346000d7103101676 \
-    --hash=sha256:83e6cf438b106c6b3852d70960967bb1b70c87438050dca0981e4b9aa751a4c1 \
-    --hash=sha256:9261783640e23258694a9ff0795df430a5a7b0a651d3dd53dd0969ad6be16da7 \
-    --hash=sha256:a6b1ccd08c04b4a06fb5aeb381be99de5ad1e5375c1785e31d78c880feb57687 \
-    --hash=sha256:bdf942448169e5336451d0494d7e3d81cfa726d5aa312affdc4682dd62a62f6d \
-    --hash=sha256:ce045d3c298fddd30e89a2777f97039d1b641eb9518ac7b26a4721903539c694
-    # via jupyter-client
 tqdm==4.67.3 \
     --hash=sha256:7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb \
     --hash=sha256:ee1e4c0e59148062281c49d80b25b67771a127c85fc9676d3be5f243206826bf
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   datasets
     #   evaluate
-    #   gpt-oss
     #   huggingface-hub
     #   lm-eval
     #   mteb
@@ -7067,19 +6935,12 @@ tqdm==4.67.3 \
     #   segmentation-models-pytorch
     #   sentence-transformers
     #   transformers
-traitlets==5.16.1 \
-    --hash=sha256:ed900c2b631aa3a112811139fa97b8d2c3bad5e989656bba4b7e52c7852c18c1 \
-    --hash=sha256:f775618166caa0396c8e337099240f2bd3e5e917d203b2e6fbe21a58d3cb1f6b
-    # via
-    #   jupyter-client
-    #   jupyter-core
 transformers==5.22.0 \
     --hash=sha256:3cca65f94b0aa33511433c7c1a661c513e4ad8bc0504cb370d181d771e7c9aa0 \
     --hash=sha256:f2864f282383820089b21d104d55cb72118b8594f053c2cbeb58d0740f9ff662
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
-    #   -r requirements/test/cuda.in
+    #   -r ../common.txt
+    #   -r cuda.in
     #   compressed-tensors
     #   genai-perf
     #   peft
@@ -7088,7 +6949,7 @@ transformers==5.22.0 \
     #   xgrammar
 transformers-stream-generator==0.0.5 \
     --hash=sha256:271deace0abf9c0f83b36db472c8ba61fdc7b04d1bf89d845644acac2795ed57
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 triton==3.8.0 \
     --hash=sha256:07a88b13e4f7e8b1769094238ab75109a5db2a8160a24ddc49c24d2efa44cb58 \
     --hash=sha256:197b0576cbcf354f27a2abdae638c72c03d93f2574844052887b0c98fd8f8e1c \
@@ -7113,14 +6974,14 @@ tritonclient==2.64.0 \
     --hash=sha256:4d1653658ba59b380b732969e67842b2c935b147abd1e89458fd64a9335b1fc7 \
     --hash=sha256:d3a52ce099840b576aeea6c1e2e7d7a9b109f3c468e52c6212d80d5b49972688 \
     --hash=sha256:f31569ab491d7815f1b8c28d07f489adf817a68b98548d5d933c9845a2879e8b
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 truststore==0.10.4 \
     --hash=sha256:9d91bd436463ad5e4ee4aba766628dd6cd7010cf3e2461756b3303710eebc301 \
     --hash=sha256:adaeaecf1cbb5f4de3b1959b42d41f6fab57b2b1666adb59e89cb0b53361d981
     # via
     #   httpcore2
     #   httpx2
-typepy==1.3.2 \
+typepy[datetime]==1.3.2 \
     --hash=sha256:b69fd48b9f50cdb3809906eef36b855b3134ff66c8893a4f8580abddb0b39517 \
     --hash=sha256:d5d1022a424132622993800f1d2cd16cfdb691ac4e3b9c325f0fcb37799db1ae
     # via
@@ -7144,8 +7005,7 @@ typing-extensions==4.16.0 \
     --hash=sha256:481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8 \
     --hash=sha256:dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5
     # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   aiohttp
     #   aiosignal
     #   albumentations
@@ -7156,14 +7016,13 @@ typing-extensions==4.16.0 \
     #   azure-core
     #   azure-identity
     #   azure-storage-blob
-    #   chz
+    #   blake3
     #   cohere
     #   datamodel-code-generator
     #   fastapi
     #   grpcio
     #   httpx2
     #   huggingface-hub
-    #   jupyter-client
     #   librosa
     #   lm-eval
     #   mcp
@@ -7204,23 +7063,21 @@ urllib3==2.8.0 \
     --hash=sha256:0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3 \
     --hash=sha256:63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   blobfile
     #   botocore
-    #   docker
     #   requests
     #   responses
     #   sentry-sdk
     #   tritonclient
     #   types-requests
-uvicorn==0.35.0 \
+uvicorn[standard]==0.35.0 \
     --hash=sha256:197535216b25ff9b785e29a0b79199f55222193d47f820816e7da751e9bc8d4a \
     --hash=sha256:bc662f087f7cf2ce11a1d7fd70b90c9f98ef2e2831556dd078d131b96cc94a01
     # via
     #   fastapi
     #   fastapi-cli
     #   fastapi-cloud-cli
-    #   gpt-oss
     #   mcp
 uvloop==0.22.1 \
     --hash=sha256:017bd46f9e7b78e81606329d07141d3da446f8798c6baeec124260e22c262772 \
@@ -7276,17 +7133,17 @@ uvloop==0.22.1 \
 vector-quantize-pytorch==1.21.2 \
     --hash=sha256:101551fdf077c38a996cd65666bbeb299ed2f3246682a51863cee1f7385e0755 \
     --hash=sha256:df4e7059c0ac633c032d2312fb73cc87a52a7c912264e59e4e08258f26754eee
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 virtualenv==21.14.0 \
     --hash=sha256:c345b0b744c70e7df7e33be20ea1ba5309db1cca3c98eacc10afb0276cf99356 \
     --hash=sha256:c3c0dbdf7259316edbb993020206ee7f7664a33063292dcc4a618e4c04cdf450
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   ray
 vocos==0.1.0 \
     --hash=sha256:0ac13eaef68596074301e912d781399b3defa4b4ca60b6bc52c8a4b9209ca235 \
     --hash=sha256:b488224dbe398ff7d4790a027ad659478b4bc02e465db992c62c12b32ca043d8
-    # via -r requirements/test/cuda.in
+    # via -r cuda.in
 watchfiles==1.2.0 \
     --hash=sha256:01859b11fd9fbca670f4d5da00fbac282cfea9bd67a2125d8b2833a3b5617ea9 \
     --hash=sha256:01ea8d66f0693b9b60a6541c8d10263091ca9a9060d242f3c1f3143f9aad2c98 \
@@ -7396,7 +7253,7 @@ watchfiles==1.2.0 \
     --hash=sha256:faea288b6f0ab1902ef08f4ca6de005dccf856c4e0c4f21b8c5fce02d90a1b08 \
     --hash=sha256:fff610d7bb2256a317bb1e96f0d7862c7aa8076733ee5df0fd41bbe76a24a4f4
     # via
-    #   -r requirements/test/../common.txt
+    #   -r ../common.txt
     #   uvicorn
 wcwidth==0.2.13 \
     --hash=sha256:3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859 \
@@ -7469,7 +7326,7 @@ werkzeug==3.1.9 \
     --hash=sha256:55ca7c70a75689be937aa27f8ff4b018f06ff4838fc73045560bf0f5a1291060 \
     --hash=sha256:6392e50c78460ba618e5b21f08a71f59c99ce99cdc6cf6e3dd7e6ccca8754fab
     # via
-    #   -r requirements/test/cuda.in
+    #   -r cuda.in
     #   schemathesis
 word2number==1.1 \
     --hash=sha256:70e27a5d387f67b04c71fbb7621c05930b19bfd26efd6851e6e0f9969dcde7d0
@@ -7555,7 +7412,7 @@ wrapt==1.17.2 \
     --hash=sha256:fc78a84e2dfbc27afe4b2bd7c80c8db9bca75cc5b85df52bfe634596a1da846b \
     --hash=sha256:ff04ef6eec3eee8a5efef2401495967a916feaa353643defcc03fc74fe213b58
     # via smart-open
-xgrammar==0.2.8 \
+xgrammar==0.2.8 ; platform_machine == "x86_64" or platform_machine == "aarch64" or platform_machine == "arm64" or platform_machine == "s390x" or platform_machine == "ppc64le" \
     --hash=sha256:08c80f20e18402397c11af6cee3c965da41f5116fa033115297bcbdaa877e07a \
     --hash=sha256:0c6125fa3dc27b46adde83329571c1dac2ab2474779daee207428ce2e9c6e9b5 \
     --hash=sha256:155091c54e3cd5cde6c29e69339a74e5c95da83bb0294acd2abb9a70f85f674e \
@@ -7598,9 +7455,7 @@ xgrammar==0.2.8 \
     --hash=sha256:f56156ca0abdaf089c3f87fcfa7bafeab47df3374f221b67b2e4b4be8c819125 \
     --hash=sha256:f5a0c18908fd0433f03602bedac21c746ac41ac5a28927f927456ac740ae8b8f \
     --hash=sha256:ffb6f7cd6e5393ef09d1a4395833e0dfbe359c07c48c2cfb028a9645702079c3
-    # via
-    #   -c requirements/common.txt
-    #   -r requirements/test/../common.txt
+    # via -r ../common.txt
 xxhash==3.5.0 \
     --hash=sha256:02c2e816896dc6f85922ced60097bcf6f008dedfc5073dcba32f9c8dd786f3c1 \
     --hash=sha256:0691bfcc4f9c656bcb96cc5db94b4d75980b9d5589f2e59de790091028580837 \
